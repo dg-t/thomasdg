@@ -1,12 +1,10 @@
 <template>
-  <section class="container-fluid">
-    <h3 class="text-center">Home</h3>    
-  </section>
+  <!-- NavBar -->
+  <h1>Contact</h1>
 </template>
 
 <script>
 export default {
-
 }
 </script>
 

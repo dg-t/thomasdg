@@ -1,12 +1,9 @@
 <template>
-  <section class="container-fluid">
-    <h3 class="text-center">Home</h3>    
-  </section>
+  <h1>My Achievements</h1>
 </template>
 
 <script>
 export default {
-
 }
 </script>
 
