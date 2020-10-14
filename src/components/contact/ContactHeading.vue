@@ -1,25 +1,27 @@
 <template>
-    <div class="heading">
-        <h2 class="text-center p-4 m-0 heading-achievements">My Achievements</h2>    
-    </div>
-</template>
+  <header class="container-fluid">
+    <h2 class="text-center p-4 m-0 heading-achievements">Contact Me</h2>    
+  </header>
+
+
+</template> 
 
 <script>
 export default {
-
 }
 </script>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.heading {
-  /* background-color: #013f59; */
-  /* background-color: rgb(255, 136, 0); */
-  /* background-color: rgb(80, 80, 80); */
-  background-color: #f4f4f4;
+header {
+    background-color: #f4f4f4;
+  margin-top:90px;
   letter-spacing: 5px;
   word-spacing: 2px;
 }
+
+/** HEADING */
 
 .heading-achievements {
   padding: 20px;
@@ -53,3 +55,6 @@ export default {
 }
 
 </style>
+
+
+

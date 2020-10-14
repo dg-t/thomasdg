@@ -5,7 +5,7 @@ import App from './App.vue'
 
 import Home from './components/Home/AppHomePage.vue'
 import Achievements from './components/Achievements/AppAchievements.vue'
-import Contact from './components/ContactMe.vue'
+import Contact from './components/contact/appContact.vue'
 import About from './components/AboutMe.vue'
 import RestaurantReview from './components/Achievements/Projects/Restaurant_review.vue'
 import CatFacts from './components/Achievements/Projects/Cat_facts.vue'
@@ -31,7 +31,7 @@ const router = createRouter({
         { path: '/achievements/6', component: QuoteGenerator, meta: { hideHeader: true } },
         { path: '/achievements/7', component: TodoTesting, meta: { hideHeader: true } },
         { path: '/achievements/8', component: ExpressFood, meta: { hideHeader: true } },
-        { path: '/contact-me', component: Contact }
+        { path: '/contact-me', component: Contact, meta: { hideFooter: true } }
     ]
 })
 

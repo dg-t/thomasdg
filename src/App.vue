@@ -1,7 +1,7 @@
 <template>
   <app-navigation v-if="!$route.meta.hideHeader"></app-navigation>
   <router-view></router-view>
-  <app-footer></app-footer>
+  <app-footer v-if="!$route.meta.hideFooter"></app-footer>
 </template>
 
 <script>

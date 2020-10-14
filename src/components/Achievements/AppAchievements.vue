@@ -2,7 +2,6 @@
   <router-view></router-view>
   <achievements-header></achievements-header>
   <section v-if="!projectDetailsShow" style="overflow: hidden" >
-    <achievements-heading></achievements-heading>
     <app-achievements v-for="(project, index) in projects" 
       :class="index % 2 == 0  ? '' : 'section-color'"
       :key="index" 
@@ -23,15 +22,13 @@
 <script>
 import AchievementsHeader from './AchievementsHeader/AchievementsHeader.vue';
 import AppAchievements from './Achievement.vue';
-import AchievementsHeading from './AchievementsHeading.vue';
-// import ProjectOne from './Projects/Project_one.vue'
-// import ProjectTwo from './Projects/Project_two.vue'
+
 
 export default {
   components: {
     AchievementsHeader,
     AppAchievements,
-    AchievementsHeading
+    // AchievementsHeading
     // ProjectOne,
     // ProjectTwo
   },

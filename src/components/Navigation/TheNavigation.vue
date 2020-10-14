@@ -2,7 +2,7 @@
   <!-- NavBar -->
     <div class="container">
       <nav  class="navbar navbar-expand-md navbar-light pt-3 fixed-top" 
-            :class="{updateColor: scrollWindow > 10 || show  }">
+            :class="[{updateColor: scrollWindow > 10 || show  }, {contactFormNavigation: $route.meta.hideFooter  }]">
           <button 
               class="navbar-toggler bg-white"
               :class="show == true ? 'btnOpen' : 'btnClose' " 
@@ -97,7 +97,6 @@ a.active {
 
 a.router-link-active,
 li {
-  padding: 2% 6%;
   opacity: 1;
   font-weight: 245;
 }
@@ -120,6 +119,12 @@ li {
   background-color: rgb(80, 80, 80);
   padding-bottom: 10px;
   padding-top: 10px;
+}
+
+.contactFormNavigation {
+  background-color: rgb(80, 80, 80);
+  padding-bottom: 25px;
+  padding-top: 25px;
 }
 
 button {
