@@ -1,4 +1,5 @@
 <template>
+
     <div class="row container_feature">
       <div class="col-md-6 center p-2 design_two">
         Websites made with love... <br />Where creativity and technology work together!
@@ -6,7 +7,8 @@
       <div class="col-md-6 img_container design">
         <img src="../../../assets/home/tech.jpg" class="img_web" alt="tech img">
       </div>
-    </div>   
+    </div>
+
     <div class="row container_feature" style="background-color:#f4f4f4;">
       <div class="col-md-6 img_container design_two">
         <img src="../../../assets/home/organised.jpg" class="img_responsive" alt="organised img">
@@ -15,6 +17,7 @@
         Modern Responsive Websites <br />Stunning design...
       </div>
     </div> 
+
     <div class="row container_feature">
       <div class="col-md-5 center p-2">
         Inspiring solutions born from <br />passion, dedication and... a lot of coffee.
@@ -23,6 +26,7 @@
         <img src="../../../assets/home/work_on_time.jpg" class="img_solution" alt="calendar img">
       </div>
     </div> 
+    
 </template>
 
 <script>
@@ -33,6 +37,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+/** TODO REMOVE IMAGE FOR MOBILE */
 
 /** ROWS HEIGHT */
 

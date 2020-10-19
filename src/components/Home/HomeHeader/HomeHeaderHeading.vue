@@ -1,7 +1,7 @@
 <template>
-    <div class="presentation mx-3 text-center">
+    <div class="presentation text-center">
       <div class="container">
-        <h1 class="text-white col-md-">Hello, I am Thomas<br /> A web Developer!</h1>
+        <h1 class="text-white">Hello, I am Thomas<br /> A web Developer!</h1>
       </div>
     </div>
 </template>

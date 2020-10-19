@@ -1,24 +1,29 @@
 <template>
+
   <section class="container-fluid p-0 m-0">
+
     <home-header></home-header>
-    <home-heading></home-heading>
+    <base-heading>Imagine it, design it, create it!</base-heading>
     <home-features></home-features>
     <home-tech></home-tech> 
+    <home-skills></home-skills>
+
   </section>
+
 </template>
 
 <script>
 import HomeHeader from './HomeHeader/HomeHeader.vue'
-import HomeHeading from './HomeHeading.vue'
 import HomeFeatures from './HomeSections/HomeFeatures.vue'
 import HomeTech from './HomeSections/HomeTechs.vue'
+import HomeSkills from './HomeSections/HomeSkills.vue'
 
 export default {
   components: {
     HomeHeader,
-    HomeHeading,
     HomeFeatures,
-    HomeTech
+    HomeTech,
+    HomeSkills
   }
 }
 </script>

@@ -1,38 +1,37 @@
 <template>
-        <div class="row container-fluid projects">
-            <div class="col-lg-5 project_description pl-5">
-                <h3>{{ title }}</h3>
-                <p>{{ description }}</p>
-                <div class="button_links">
-                  <router-link :to="'/achievements/'+id" @click="switchProject()">Description</router-link>
-                  <a :href="github_link" target="_blank">Source Code</a>
-                </div>
-                <div class="button_links">
-                  <a :href="webpage_link" target="_blank" v-if="webpage_link">Webpage</a>
-                </div>
-            </div>
-            <div class="col-lg-7 image_container pr-5">
-              <p class="ghost_text" v-if="show">{{title}}</p>
-              <div :class="{image_scroll: id == 7 || id == 4 }">
-                <img class="img-fluid img_project" @mouseover="show = !show" @mouseleave="show = !show"  :src="image" />
-              </div>
-            </div>
+
+  <div class="row container-fluid projects">
+
+      <div class="col-lg-5 project_description">
+          <h3>{{ title }}</h3>
+          <p>{{ description }}</p>
+          <div class="button_links">
+            <router-link :to="'/achievements/'+id">Description</router-link>
+            <a :href="github_link" target="_blank">Source Code</a>
+          </div>
+          <div class="button_links">
+            <a :href="webpage_link" target="_blank" v-if="webpage_link">Webpage</a>
+          </div>
+      </div>
+      
+      <div class="col-lg-7 image_container">
+        <p class="ghost_text" v-if="show">{{title}}</p>
+        <div :class="{image_scroll: id == 'testing-todo-app' || id == 'film-festival' }">
+          <img :src="image" :alt="title" class="img-fluid img_project" @mouseover="show = !show" @mouseleave="show = !show" />
         </div>
+      </div>
+
+  </div>
+  
 </template>
 
 <script>
 
 export default {
     props: ["id", "title", "description", "image", "github_link", "webpage_link"],
-    emit: ["switch-project"],
     data() {
       return {
         show: true
-      }
-    },
-    methods: {
-      switchProject() {
-        this.$emit("switch-project");
       }
     }
 }
@@ -41,11 +40,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+/** TODO CHANGE image_scroll SIZE FOR MOBILE */
+/** TODO CHANGE BUTTONS ARRANGMENT FOR MOBILE */
+
 /** GENERAL */
 
 .projects {
   padding: 50px 0;
-  /* border: 0.2px solid #0af; */
   margin: 0 auto;
 }
 
@@ -56,6 +57,7 @@ export default {
   display:flex;
   justify-content: center;
   align-items: center;
+  padding-right: 1.5em;
 }
 
 .image_scroll {
@@ -87,7 +89,7 @@ export default {
 /** TEXT DESCRIPTION */
 
 .project_description {
-  padding: 40px 10px 10px 10px;
+  padding: 3em 1em 1em 2em;
   font-size: 80%;
   word-spacing: 1px;
   letter-spacing: 0.4px;
@@ -98,41 +100,27 @@ export default {
   justify-content: space-around;
   justify-items: center;
   width: 80%;
-  margin: 10% 0 0 0%;
+  margin: 10% 0 0 0;
 }
 
 a {
-  font-size: 15px;
+  font-size: 90%;
   white-space: nowrap;
   text-align: center;
-  width:130px;
-  padding: 5px 10px;
-  color: white;
-  /* background-color: #d3d3d3; */
-  background-color: #07c;
-  margin-left: 30px;
+  padding: 0.3em 0.8em;
+  color: #07c;
+  margin-left: 10%;
   border-radius: 5px;
+  border: 1px solid #0af;
   transition: 0.6s;
   box-shadow: 1px 2px 2px  #888888;
   text-decoration: none;
 }
 
-
 a:hover {
-  /* animation: example 2s infinite; */
-  /* background-color: #0af; */
+  color: white;
   background-color: #0af;
   transition: all 0.5s ease;
 }
 
-/* @keyframes example {
-  0%   {
-    background-color: white;
-    color:black
-    }
-  100% {
-    background-color: #0af;
-    color:white;
-    }
-} */
 </style>

@@ -1,7 +1,8 @@
 <template>
-  <router-view></router-view>
+  
   <achievements-header></achievements-header>
-  <section v-if="!projectDetailsShow" style="overflow: hidden" >
+
+  <section style="overflow: hidden" >
     <app-achievements v-for="(project, index) in projects" 
       :class="index % 2 == 0  ? '' : 'section-color'"
       :key="index" 
@@ -11,33 +12,25 @@
       :image="project.image"
       :github_link="project.github_link"
       :webpage_link="project.webpage_link"
-      @switch-project="switchProject"> </app-achievements>
+      > </app-achievements>
   </section>
-  <section>
-    <router-view></router-view>
-    <!-- <component :is="selectProject"></component> -->
-  </section>
+
 </template>
 
 <script>
-import AchievementsHeader from './AchievementsHeader/AchievementsHeader.vue';
+import AchievementsHeader from '../Header/SectionsHeader.vue';
 import AppAchievements from './Achievement.vue';
-
 
 export default {
   components: {
     AchievementsHeader,
     AppAchievements,
-    // AchievementsHeading
-    // ProjectOne,
-    // ProjectTwo
   },
   data() {
     return {
-      projectDetailsShow: false,
       projects: [
         {
-          id: 1,
+          id: "restaurant-reviews",
           title: "Restaurant reviews",
           description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                         Excepturi neque, ipsa animi maiores repellendus distinctio aperiam 
@@ -48,7 +41,7 @@ export default {
           webpage_link: "https://dg-t.github.io/restaurantReview/"
         },
         {
-          id: 2,
+          id: "cat-facts",
           title: "Cat Facts",
           description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                         Excepturi neque, ipsa animi maiores repellendus distinctio aperiam 
@@ -59,7 +52,7 @@ export default {
           webpage_link: "https://dg-t.github.io/catFacts/"
         },
         {
-          id: 3,
+          id: "ninja-fight",
           title: "Ninja Fight",
           description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                         Excepturi neque, ipsa animi maiores repellendus distinctio aperiam 
@@ -70,7 +63,7 @@ export default {
           webpage_link: "https://dg-t.github.io/ninjaGamejs/"
         },
         {
-          id: 4,
+          id: "film-festival",
           title: "Film Festival",
           description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                         Excepturi neque, ipsa animi maiores repellendus distinctio aperiam 
@@ -81,7 +74,7 @@ export default {
           webpage_link: "https://dg-t.github.io/Film-Festival-Website/"
         },
         {
-          id: 5,
+          id: "dice-game",
           title: "Dice Game",
           description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                         Excepturi neque, ipsa animi maiores repellendus distinctio aperiam 
@@ -92,7 +85,7 @@ export default {
           webpage_link: "https://dg-t.github.io/diceGame/"
         },
         {
-          id: 6,
+          id: "quote-generator",
           title: "Quote Generator",
           description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                         Excepturi neque, ipsa animi maiores repellendus distinctio aperiam 
@@ -103,7 +96,7 @@ export default {
           webpage_link: "https://dg-t.github.io/QuoteGenerator/"
         },
         {
-          id: 7,
+          id: "testing-todo-app",
           title: "Testing todo app",
           description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                         Excepturi neque, ipsa animi maiores repellendus distinctio aperiam 
@@ -113,7 +106,7 @@ export default {
           github_link: "https://github.com/dg-t/todosAppTesting"
         },
         {
-          id: 8,
+          id: "express-food",
           title: "Express Food",
           description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                         Excepturi neque, ipsa animi maiores repellendus distinctio aperiam 
@@ -124,24 +117,10 @@ export default {
         }
         ]
     }
-  },
-  methods: {
-    switchProject() {
-      this.projectDetailsShow = true;
-
-      // if (id.id == 0) {
-      //   this.selectProject = "Project-one";
-      //   this.projectDetailsShow = true;
-      // } else if (id.id == 1) {
-      //   this.selectProject = "Project-two";
-      //   this.projectDetailsShow = true;
-      // }
-    }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 </style>

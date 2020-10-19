@@ -1,11 +1,11 @@
 <template>
   <app-navigation v-if="!$route.meta.hideHeader"></app-navigation>
   <router-view></router-view>
-  <app-footer v-if="!$route.meta.hideFooter"></app-footer>
+  <app-footer></app-footer>
 </template>
 
 <script>
-import appNavigation from './components/Navigation/TheNavigation.vue'
+import appNavigation from './components/Header/TheNavigation.vue'
 import appFooter from './components/Footer/TheFooter.vue'
 
 export default {

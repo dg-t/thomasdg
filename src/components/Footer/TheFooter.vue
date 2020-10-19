@@ -1,5 +1,6 @@
 <template>
-	<footer class="page-footer container-fluid mb-0">
+
+	<footer class="page-footer container-fluid mb-0" v-if="!$route.meta.contactFooter">
 		<div class="row custom text-white text-center">
 			<div class="mt-5 icon-container w-100">
 				<a href="https://www.linkedin.com/in/thomas-di-giovine-39589817b/" target="_blank" class="mx-4 my-3">
@@ -12,6 +13,13 @@
             <p class="pb-4 mt-3 text-center w-100">Copyright © 2020 Thomas Di Giovine. All Rights Reserved.</p>
 		</div>
 	</footer>
+
+    <footer class="page-footer container-fluid mb-0" v-if="$route.meta.contactFooter">
+		<div class="row custom text-white text-center">
+            <p class="py-3 my-3 text-center w-100">Copyright © 2020 Thomas Di Giovine. All Rights Reserved.</p>
+		</div>
+	</footer>
+
 </template>
 
 <script>
@@ -29,7 +37,7 @@ footer {
     background-attachment: fixed;
     font-size: 60%;
     position:relative;
-    height:250px;
+    height:auto;
 }
 
 

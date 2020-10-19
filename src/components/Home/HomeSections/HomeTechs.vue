@@ -1,6 +1,9 @@
 <template>
+
   <section class="container-fluid p-0 m-0 text-center">
-    <h2 class="heading-techs">Some of the technologies I like to use...</h2>
+
+    <base-heading>Some of the technologies I use...</base-heading>
+    
     <div class="row icon_container">
         <div class="col-md-4 mb-5 animate__animated" style="opacity:0;"
             :class="[{animate__fadeInTopLeft: scrollWindow > 1700}, {visible: scrollWindow > 1700}]">
@@ -27,12 +30,15 @@
             <img src="../../../assets/icons/python_icon.svg" alt="js icon">
         </div>
     </div>
-    <h2 class="p-4">and more...</h2>
+
+    <!-- <h2 class="custom-heading separator m-0">and more...</h2> -->
+
   </section>
 
 </template>
 
 <script>
+
 export default {
   data() {
     return {
@@ -49,43 +55,12 @@ export default {
     window.addEventListener('scroll', this.isScrolled)
   }
 }
+
 </script>
 
 <style scoped>
 
-section {
-    background-color: #f4f4f4;
-}
-.heading-techs {
-  padding: 20px;
-  margin-top:20px;
-}
-
-.heading-techs:before {
-    display: block;
-    background-color: #013f59;
-    content: " ";
-    height: 2px;
-    width: 30%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-}
-
-.heading-techs:after {
-  display:block;
-  width: 60%;
-  content: '';
-  margin: auto;
-  border-bottom: solid 2px #013f59;  
-  padding-bottom: 30px;
-  transform: scaleX(1);  
-  transition: transform 0.5s ease-in-out;
-  transform-origin:100% 50%
-}
-.heading-techs:hover:after { 
-  transform: scaleX(0);
-  transform-origin:0 50%;
-}
+/** ICONS */
 
 .icon_container {
     display: flex;
@@ -93,18 +68,24 @@ section {
     align-items: center;
     text-align: center;
     padding: 50px;
+    background-color: #fafafa
 }
 
 img {
     height:120px;
     width: auto;
 }
-.card_icon {
-    padding: 10px;
-}
 
 .visible {
     opacity: 1;
 }
 
+/** LOWER HEADING */
+
+/* .custom-heading {
+  font-size: 180%;
+  font-weight: 320;
+  padding: 40px;
+  background-color: #fafafa
+} */
 </style>

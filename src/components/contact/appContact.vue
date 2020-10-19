@@ -1,22 +1,21 @@
 <template>
-  <contact-heading></contact-heading>
+  <header>
+    <base-heading>
+      Contact Me
+    </base-heading>
+  </header>
 
   <contact-form></contact-form>
   <contact-socials></contact-socials>
 
-  <contact-footer></contact-footer>
 </template> 
 
 <script>
-import ContactHeading from './ContactHeading.vue'
 import ContactForm from './ContactForm.vue'
-import ContactFooter from '../Footer/ContactFooter.vue'
 import ContactSocials from './ContactSocials.vue'
 
 export default {
   components: {
-    ContactHeading,
-    ContactFooter,
     ContactSocials,
     ContactForm
   },
@@ -26,6 +25,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+/** TODO REMOVE MARGIN TOP FOR MOBILE */
+header {
+  background-color: #f4f4f4;
+  margin-top:90px;
+  letter-spacing: 5px;
+  word-spacing: 2px;
+}
 
 </style>
 
