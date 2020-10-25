@@ -162,6 +162,7 @@ h4 {
 @media only screen and (max-width: 991px) {
   .img_project {
   padding: 7% 0;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -169,9 +170,7 @@ h4 {
   filter: brightness(100%);
   transform: rotate(0);
   padding: 7% 0;
+  }
 }
 
-}
-
-}
 </style>

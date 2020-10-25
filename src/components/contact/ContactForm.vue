@@ -1,15 +1,15 @@
 <template>
-  <section class=" mt-0">
+  <section class=" container-fluid mt-0">
     <div class="form-heading">
-        <div class="col-md-3 col-sm-6 icon-contact">
-                <h4>Send me an Email</h4>
-      <i class="fa fa-envelope ml-4 fa_custom" aria-hidden="true"></i>
-            </div>
-      
+      <div class="icon-contact">
+        <h4>Send me an Email</h4>
+        <i class="fa fa-envelope ml-4 fa_custom" aria-hidden="true"></i>
+      </div>
     </div>
+
     <div class="row">
-        <div class="col-md-7">
-            <form 
+      <div class="col-md-7">
+        <form 
             :action="'mailto:thomas.dg.101@gmail.com?subject=Lets Talk - ' + userName.validatedName + '&body=' + userMessage.validatedMessage + ''" 
             method="post" 
             enctype="text/plain" 
@@ -18,38 +18,38 @@
             @submit="formSubmit"
             class="form-text section-color">
             
-            <div class="row pt-2">
-                <div class="form-group col-md-6 form-input-group">
-                <input 
-                    id="user-name" 
-                    type="text" 
-                    class="form-control" 
-                    placeholder="Your Name *"
-                    v-model="userName.name" 
-                    @blur="validateName" />
+          <div class="row pt-2">
+            <div class="form-group col-md-6 form-input-group">
+              <input 
+                  id="user-name" 
+                  type="text" 
+                  class="form-control" 
+                  placeholder="Your Name *"
+                  v-model="userName.name" 
+                  @blur="validateName" />
 
-                    <transition name="fade" class="validation">
-                        <p v-if="!userName.isValidated" class="validation">This field is required.</p>                    
-                    </transition>
-                </div>
-
-                <div class="form-group col-md-6 form-input-group">
-                <input 
-                    id="user-email" 
-                    type="email" 
-                    class="form-control" 
-                    placeholder="E-mail *"
-                    v-model="userEmail.email" 
-                    @blur="validateEmail" />
-                    
-                    <transition name="fade" class="validation">
-                        <p v-if="!userEmail.isValidated" class="validation">This field is required.</p>
-                    </transition>
-                </div>
+                <transition name="fade" class="validation">
+                    <p v-if="!userName.isValidated" class="validation">This field is required.</p>                    
+                </transition>
             </div>
 
-            <div class="form-group pt-4">
-                <textarea 
+            <div class="form-group col-md-6 form-input-group">
+              <input 
+                  id="user-email" 
+                  type="email" 
+                  class="form-control" 
+                  placeholder="E-mail *"
+                  v-model="userEmail.email" 
+                  @blur="validateEmail" />
+                
+                <transition name="fade" class="validation">
+                    <p v-if="!userEmail.isValidated" class="validation">This field is required.</p>
+                </transition>
+            </div>
+          </div>
+
+          <div class="form-group pt-4">
+            <textarea 
                 class="form-control form-text" 
                 id="user-message" 
                 rows="3" 
@@ -57,20 +57,21 @@
                 v-model="userMessage.message"
                 @blur="validateMessage"></textarea>
 
-                <transition name="fade" class="validation">
-                    <p v-if="!userMessage.isValidated" class="validation">This field is required.</p>
-                </transition>
-            </div>
+            <transition name="fade" class="validation">
+              <p v-if="!userMessage.isValidated" class="validation">This field is required.</p>
+            </transition>
+          </div>
 
-            <div class="button-container pt-3">
-                <button type="submit">SEND</button>
-            </div>
-            </form>
-        </div>
+          <div class="button-container pt-3">
+            <button type="submit">SEND</button>
+          </div>
 
-            <div class="col-md-5 postman-image">
-                <img src="../../assets/contact/postman.jpg" alt="">
-            </div>
+        </form>
+      </div>
+
+      <div class="col-md-5 postman-image">
+          <img src="../../assets/contact/postman.jpg" alt="Postman">
+      </div>
 
     </div>
   </section>
@@ -135,10 +136,10 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 /** FORM */
+
 form {
   margin: 5% auto;
   width: 80%;
@@ -158,6 +159,7 @@ form {
 }
 
 /** FORM INPUTS */
+
 .form-input-group {
   display: flex;
   flex-wrap: wrap;
@@ -165,7 +167,8 @@ form {
 
 } 
 
-input {
+input,
+textarea {
   width: 100%;
   padding:10px;
   font-size: 90%;
@@ -183,7 +186,7 @@ textarea:focus {
   white-space: pre-wrap;
 }
 
-/** Validation text */
+/** VALIDATION TEXT */
 .validation {
   font-size: 60%;
   color:rgba(255, 0, 0, 0.7);
@@ -211,21 +214,16 @@ button {
   text-decoration: none;
 }
 
-
 button:focus {
   outline:none;
   box-shadow: 0 0 3px 2px #0af;
 }
 
 
-
 button:hover {
-  /* animation: example 2s infinite; */
-  /* background-color: #0af; */
   background-color: #0af;
   transition: all 0.5s ease;
 }
-
 
 /** ICON */
 
@@ -264,6 +262,7 @@ button:hover {
 }
 
 /** IMAGE POSTMAN */
+
 .postman-image {
     display: flex;
     justify-content: center;
@@ -293,10 +292,6 @@ img {
     transition: all 0.5s ease-out;
 }
 
-/* .fade-enter-to {}
-
-.fade-leave-from {} */
-
 .fade-leave-active {
     font-size: 60%;
     color:#f00;
@@ -313,22 +308,24 @@ img {
     transform:translateY(-8px);
 }
 
-/* .fade-enter-active, .fade-enter, .fade-leave-active {
-  transition: all 1s ease-out;
-  font-size: 60%;
-  color:#f00;
-  font-style: italic;
-  text-decoration: underline;
-  width:100%;
-  padding:5px;
-  margin-left: 2%;
+/** MEDIA QUERY */
+
+@media only screen and (max-width: 767px) {
+  .postman-image {
+    display:none;
+  }
 }
-.fade-leave-to {
-  opacity: 0;
-} */
 
-
-
+@media only screen and (max-width: 500px) {
+  form {
+    margin: 5% auto;
+    width: 90%;
+    padding: 0.8rem;
+  }
+  button {
+    font-size: 90%;
+  }
+}
 
 </style>
 
