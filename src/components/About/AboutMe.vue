@@ -3,9 +3,9 @@
   <achievements-header></achievements-header>
 
 
-  <section class="container-fluid row py-5 px-0 mx-0">
+  <section class="container-fluid row py-3 py-md-5 px-0 mx-0">
 
-    <div class="row container-fluid pb-sm-5 px-lg-5 mx-0">
+    <div class="row container-fluid pb-2 pb-sm-4 pb-md-5 px-lg-5 mx-0">
       <div class="container-fluid col-12">
         <h4>A little bit about me...</h4>
         <p>Hi! I am Thomas, a web developer in Barcelona, Spain. 
@@ -22,9 +22,9 @@
       </div>
     </div>
 
-    <div class="row section-color container-fluid px-lg-5 py-5 mx-0">
+    <div class="row section-color container-fluid px-lg-5 py-3 py-sm-4 py-md-5 mx-0">
 
-      <div class="col-md-6 pr-lg-5">
+      <div class="col-lg-6 pr-lg-5">
         <h4>My passions</h4>
         <p>
           There are three things I love the most, programming, travel, and food. 
@@ -44,13 +44,13 @@
         </p>
       </div>
 
-      <div class="container image_container col-md-6">
+      <div class="container image_container col-lg-6">
         <img src="../../assets/about/travel.jpg" class="img-fluid img_project" alt="travel">
       </div>
 
     </div>
 
-    <div class="row container-fluid py-sm-5 px-lg-5 mx-0">
+    <div class="row container-fluid py-2 py-md-5 px-lg-5 mx-0">
       <div class="container-fluid col-12">
         <h4>Where I am now...</h4>
         <p>
@@ -73,13 +73,13 @@
       </div>
     </div>
 
-    <div class="row section-color container-fluid mx-0 py-5">
+    <div class="row section-color container-fluid mx-0 py-3 py-sm-4 py-md-5">
 
-      <div class="col-md-5 image_container container">
+      <div class="col-lg-5 image_container container">
         <img src="../../assets/about/dream.jpg" class="img-fluid img_project" alt="">
       </div>
 
-      <div class="container-fluid  col-md-6">
+      <div class="container-fluid  col-lg-6">
         <h4>My Dreams</h4>
         <p>
           I travelled, I had fun, and I met a lot of people from everywhere around the world. <br />
@@ -95,7 +95,7 @@
     </div>
 
 
-    <div class="row container-fluid py-sm-5 px-lg-5 mx-0">
+    <div class="row container-fluid py-md-5 px-lg-5 mx-0">
       <div class="container-fluid col-md-12">
         <h4>My Qualifications</h4>
         <p>
@@ -125,6 +125,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+/** GENERAL TEXT */
 p {
   font-size: 80%;
   letter-spacing: 0.5px;;
@@ -134,6 +135,8 @@ h4 {
   padding: 20px;
   letter-spacing: 2px;;
 }
+
+/** IMAGES */
 
 .image_container {
   position:relative;
@@ -152,5 +155,23 @@ h4 {
 .img_project:hover {
   transform: scale(1.05);
   filter: brightness(100%);
+}
+
+/** MEDIA QUERY */
+
+@media only screen and (max-width: 991px) {
+  .img_project {
+  padding: 7% 0;
+}
+
+@media only screen and (max-width: 480px) {
+  .img_project {
+  filter: brightness(100%);
+  transform: rotate(0);
+  padding: 7% 0;
+}
+
+}
+
 }
 </style>
