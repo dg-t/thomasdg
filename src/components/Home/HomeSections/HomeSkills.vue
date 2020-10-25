@@ -34,15 +34,16 @@ export default {
                     description: `Since the very beginning, I provide Responsive Web Wesign ensures the creation of a 
                                     beautiful and flexible layout and guarantees the best 
                                     possible experience across multiple devices.`,
-                    image: require("../../../assets/test/responsive.svg"),
+                    image: require("../../../assets/icons/skills_offer/responsive.svg"),
                     bgColor: "#fff675"
                 },
                 {
                     id: 2,
                     title: "Functioanlity",
-                    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                    Excepturi neque, ipsa animi maiores`,
-                    image: require("../../../assets/test/functionality.svg"),
+                    description: `Fully customize a website functionality dictating what it can exactly do and how it works 
+                                    with the implementation of powerful features. Providing the correct functionality is crucial 
+                                    to the success of a website. `,
+                    image: require("../../../assets/icons/skills_offer/functionality.svg"),
                     bgColor: "#5f9ea0"
                 },
                 {
@@ -51,7 +52,7 @@ export default {
                     description: `My approach to web design is to create a website with a beautiful layout and modern content structure
                                     while ensuring ease of use and simplicity to provide the audience with an enjoyable, and positive experience.
                                     `,
-                    image: require("../../../assets/test/web-design.svg"),
+                    image: require("../../../assets/icons/skills_offer/web-design.svg"),
                     bgColor: "#ff5e5e"
                 },
                 {
@@ -60,15 +61,16 @@ export default {
                     description: `My search engine optimization (SEO) methods, will optimize the code of the website 
                                     to deliver faster performance and better user experience, increasing the quantity 
                                     and quality of traffic to the website.`,
-                    image: require("../../../assets/test/seo.svg"),
+                    image: require("../../../assets/icons/skills_offer/seo.svg"),
                     bgColor: "#6ffebb"
                 },
                 {
                     id: 5,
                     title: "Marketing Strategies",
-                    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                    Excepturi neque, ipsa animi maiores`,
-                    image: require("../../../assets/test/marketing.svg"),
+                    description: `Maximize prospective customers by implementing a good marketing strategy and 
+                                    social media management to attract potential customers to visit the website and 
+                                    become regulars.`,
+                    image: require("../../../assets/icons/skills_offer/marketing.svg"),
                     bgColor: "#5de7ff"
                 },
                 {
@@ -76,7 +78,7 @@ export default {
                     title: "After Care Support",
                     description: `Web development is constantly changing and evolving. The regular maintenance of a website is 
                                     just as important as building it, to ensure the website is free of bugs and glitches.`,
-                    image: require("../../../assets/test/support.svg"),
+                    image: require("../../../assets/icons/skills_offer/support.svg"),
                     bgColor: "#ffd875"
                 }
             ]

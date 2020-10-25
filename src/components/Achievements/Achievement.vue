@@ -4,7 +4,7 @@
 
       <div class="col-lg-5 project_description">
           <h3>{{ title }}</h3>
-          <p>{{ description }}</p>
+          <p v-html="description"></p>
           <div class="button_links">
             <router-link :to="'/achievements/'+id">Description</router-link>
             <a :href="github_link" target="_blank">Source Code</a>
@@ -14,12 +14,27 @@
           </div>
       </div>
       
-      <div class="col-lg-7 image_container">
+      <div class="col-lg-7 image_container" v-if="id !='restaurant-reviews'">
         <p class="ghost_text" v-if="show">{{title}}</p>
         <div :class="{image_scroll: id == 'testing-todo-app' || id == 'film-festival' }">
           <img :src="image" :alt="title" class="img-fluid img_project" @mouseover="show = !show" @mouseleave="show = !show" />
         </div>
       </div>
+
+      <!-- Test -->
+      <div class="col-lg-7 flip-box" v-if="id=='restaurant-reviews'">
+        <div class="flip-box-inner">
+          <p class="ghost_text" v-if="show">{{title}}</p>
+          <div class="flip-box-front">
+            <img :src="image" class="img-fluid" :alt="title">
+          </div>
+          <div class="flip-box-back">
+            <img :src="image_two" class="img-fluid" :alt="title">
+          </div>
+        </div>
+      </div>
+
+      <!-- End Test -->
 
   </div>
   
@@ -28,7 +43,7 @@
 <script>
 
 export default {
-    props: ["id", "title", "description", "image", "github_link", "webpage_link"],
+    props: ["id", "title", "description", "image", "image_two", "github_link", "webpage_link"],
     data() {
       return {
         show: true
@@ -84,6 +99,47 @@ export default {
 .img_project:hover {
   transform: scale(1.05);
   filter: brightness(100%);
+}
+
+/** FLIP IMAGE */
+
+/** TODO add height 200px for mobile */
+.flip-box {
+  background-color: transparent;
+  padding: 5%;
+  /* height:200px; */
+}
+
+.flip-box-inner {
+  position: relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 1.5s ease;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  filter: brightness(80%);
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-back {
+  filter: brightness(100%);
+}
+
+.flip-box-back {
+  transform: rotateY(180deg);
 }
 
 /** TEXT DESCRIPTION */

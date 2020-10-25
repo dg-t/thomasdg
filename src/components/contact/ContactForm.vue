@@ -69,7 +69,7 @@
         </div>
 
             <div class="col-md-5 postman-image">
-                <img src="../../assets/test/postman_a.jpg" alt="">
+                <img src="../../assets/contact/postman.jpg" alt="">
             </div>
 
     </div>
@@ -171,10 +171,10 @@ input {
   font-size: 90%;
 }
 
-input:focus {
-  border-color: rgba(0, 170, 255, 0.3);
-    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.1) inset, 0 0 5px rgba(0, 170, 255, 0.3);
-    outline: 0 none;
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.1) inset, 0 0 5px rgba(0, 170, 255, 0.3);
 }
 
 /** TEXTAREA */
@@ -214,6 +214,7 @@ button {
 
 button:focus {
   outline:none;
+  box-shadow: 0 0 3px 2px #0af;
 }
 
 

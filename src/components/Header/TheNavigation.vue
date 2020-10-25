@@ -120,9 +120,11 @@ li {
 
 button {
     outline: none;
+    box-shadow: 0 0 3px 2px #0af;
 }
 
-button:hover {
+button:hover,
+button:focus {
     border: 1px solid #0af;
 }
 

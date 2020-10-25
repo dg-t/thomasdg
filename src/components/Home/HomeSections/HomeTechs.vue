@@ -7,27 +7,27 @@
     <div class="row icon_container">
         <div class="col-md-4 mb-5 animate__animated" style="opacity:0;"
             :class="[{animate__fadeInTopLeft: scrollWindow > 1700}, {visible: scrollWindow > 1700}]">
-            <img src="../../../assets/icons/html_icon.svg" class="" alt="js icon">
+            <img src="../../../assets/icons/skills_techs/html_icon.svg" class="" alt="js icon">
         </div>
         <div class="col-md-4 mb-5 animate__animated" style="opacity:0;"
             :class="[{animate__fadeInDown: scrollWindow > 1700}, {visible: scrollWindow > 1700}]">
-            <img src="../../../assets/icons/css_icon.svg" alt="js icon">
+            <img src="../../../assets/icons/skills_techs/css_icon.svg" alt="js icon">
         </div>
         <div class="col-md-4 mb-5 animate__animated" style="opacity:0;"
             :class="[{animate__fadeInTopRight: scrollWindow > 1700}, {visible: scrollWindow > 1700}]">
-            <img src="../../../assets/icons/javascript_icon.svg" alt="js icon">
+            <img src="../../../assets/icons/skills_techs/javascript_icon.svg" alt="js icon">
         </div>
         <div class="col-md-4 mt-5 animate__animated" style="opacity:0;"
             :class="[{animate__fadeInBottomLeft: scrollWindow > 1900}, {visible: scrollWindow > 1900}]">
-            <img src="../../../assets/icons/vue_icon.svg" alt="js icon">
+            <img src="../../../assets/icons/skills_techs/vue_icon.svg" alt="js icon">
         </div>
         <div class="col-md-4 mt-5 animate__animated" style="opacity:0;"
             :class="[{animate__fadeInUp: scrollWindow > 1900}, {visible: scrollWindow > 1900}]">
-            <img src="../../../assets/icons/node_icon.svg" alt="js icon">
+            <img src="../../../assets/icons/skills_techs/node_icon.svg" alt="js icon">
         </div>
         <div class="col-md-4 mt-5 animate__animated" style="opacity:0;"
             :class="[{animate__fadeInBottomRight: scrollWindow > 1900}, {visible: scrollWindow > 1900}]">
-            <img src="../../../assets/icons/python_icon.svg" alt="js icon">
+            <img src="../../../assets/icons/skills_techs/python_icon.svg" alt="js icon">
         </div>
     </div>
 

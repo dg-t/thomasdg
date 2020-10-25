@@ -28,20 +28,30 @@
       </div>
     </div>
 
-  </section>
+    <div class="project_btn_container">
+      <a class="project_btn" @click="feedback=!feedback">See Feedback</a>
+    </div>
 
-  <section class="py-5 separator container" v-if="feedback">
-    <h4 class="pb-3">Instructor feedback</h4>
-    <p>Thomas presented the 4th project in the path, here is the summary:</p>
-    <ul>
-      <li>All the deliverables were in place and worked as per the specifications.</li>
-      <li>All the deliverables were in place and worked as per the specifications.</li>
-      <li>The UML diagram was logically implemented with all the tables rightly connected.</li>
-      <li>Thomas did a great job in writing SQL queries and was thorough with their meaning as well.</li>
-      <li>The database was mapped as per the UML diagram and contained proper data to test.</li>
-    </ul>
-    <p>Overall, a great effort in getting the project completed.</p>
-    <p><b>Hence approved!</b></p>
+    <section class="pb-5 separator section-color" v-if="feedback">
+      <div class="container">
+        <h4 class="pb-3">Instructor feedback</h4>
+        <p>Thomas presented the 4th project in the path, here is the summary:</p>
+        <ul>
+          <li>All the deliverables were in place and worked as per the specifications.</li>
+          <li>All the deliverables were in place and worked as per the specifications.</li>
+          <li>The UML diagram was logically implemented with all the tables rightly connected.</li>
+          <li>Thomas did a great job in writing SQL queries and was thorough with their meaning as well.</li>
+          <li>The database was mapped as per the UML diagram and contained proper data to test.</li>
+        </ul>
+        <p>Overall, a great effort in getting the project completed.</p>
+        <p><b>Hence approved!</b></p>
+      </div>
+    </section>
+
+    <div class="project_btn_container separator">
+      <router-link :to="'/achievements/'" class="project_btn">Back to projects</router-link>
+    </div>
+
   </section>
 </template>
 

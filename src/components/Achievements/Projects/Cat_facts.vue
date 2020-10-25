@@ -15,7 +15,10 @@
         <li>The view is set in a single element.</li>
       </ul>
     </div>
-    
+
+    <div class="project_btn_container separator">
+      <router-link :to="'/achievements/'" class="project_btn">Back to projects</router-link>
+    </div>
   </section>
 </template>
 
@@ -40,5 +43,6 @@ a:hover {
   color: #0af;
   transition: all 0.5s ease;
 }
+
 
 </style>

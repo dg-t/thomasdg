@@ -30,25 +30,34 @@
           <li>Timeline</li>
           <li>Technical specification</li>
         </ul>
-        <p>Please click the below button to see a copy of the project brief:</p>
-        <a href="/pdf_file/ProjectBriefFilmFestival.pdf" class="p-2 mb-4" target="_blank">See PDF</a>
+        <p>Please click the button to see a copy of the project brief:
+          <a href="/pdf_file/ProjectBriefFilmFestival.pdf" class="link_customized" target="_blank">see pdf</a>
+        </p>
       </div>
     </div>
-  </section>
+  
+    <div class="project_btn_container">
+      <a class="project_btn" @click="feedback=!feedback">See Feedback</a>
+    </div>
 
-  <section class="py-5 separator" v-if="feedback">
-    <div class="container">
-      <h4 class="py-3">Instructor feedback</h4>
-      <p><b>Summary:</b></p>
-      <p>Thomas has done a fantastic job with his website! <br />
-        I've left my feedback about it below.</p>
+    <section class="pb-5 separator section-color" v-if="feedback">
+      <div class="container">
+        <h4 class="py-3">Instructor feedback</h4>
+        <p><b>Summary:</b></p>
+        <p>Thomas has done a fantastic job with his website! <br />
+          I've left my feedback about it below.</p>
 
-      <p><b>Things to work on:</b></p>
-      <p>The theme/design chosen for the website could have been more apt, but since this is trivial, it is okay.</p>
-      <p><b>Overall impression:</b></p>
-      <p>Thomas has written a very well-detailed project brief.<br />
-        He has also built a great website and it meets all of Jennifer's requirements!<br />
-        All the best with your future projects, Thomas! :)</p>
+        <p><b>Things to work on:</b></p>
+        <p>The theme/design chosen for the website could have been more apt, but since this is trivial, it is okay.</p>
+        <p><b>Overall impression:</b></p>
+        <p>Thomas has written a very well-detailed project brief.<br />
+          He has also built a great website and it meets all of Jennifer's requirements!<br />
+          All the best with your future projects, Thomas! :)</p>
+      </div>
+    </section>
+
+    <div class="project_btn_container separator">
+      <router-link :to="'/achievements/'" class="project_btn">Back to projects</router-link>
     </div>
   </section>
 </template>
@@ -70,21 +79,14 @@ export default {
 /** DOWNLOAD LINK */
 
 a {
-  font-size: 15px;
-  white-space: nowrap;
-  text-align: center;
   padding: 5px 10px;
-  color: black;
-  background-color: #d3d3d3;
-  border-radius: 5px;
+  color: #07c;
   transition: 0.6s;
-  box-shadow: 1px 2px 2px  #888888;
   text-decoration: none;
 }
 
 a:hover {
-  background-color: #0af;
-  color: white;
+  color: #0af;
   transition: all 0.5s ease;
 }
 

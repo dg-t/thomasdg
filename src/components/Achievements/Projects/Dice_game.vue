@@ -16,6 +16,10 @@
         <li>The first player to reach the number of points as setted in the beginning of the game on the GLOBAL score wins the game</li>
       </ul>
     </div>
+
+    <div class="project_btn_container separator">
+      <router-link :to="'/achievements/'" class="project_btn">Back to projects</router-link>
+    </div>
     
   </section>
 </template>

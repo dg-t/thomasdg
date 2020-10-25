@@ -45,7 +45,7 @@
       </div>
 
       <div class="container image_container col-md-6">
-        <img src="../../assets/test/travel_one.jpg" class="img-fluid img_project" alt="travel">
+        <img src="../../assets/about/travel.jpg" class="img-fluid img_project" alt="travel">
       </div>
 
     </div>
@@ -76,7 +76,7 @@
     <div class="row section-color container-fluid mx-0 py-5">
 
       <div class="col-md-5 image_container container">
-        <img src="../../assets/test/free.jpg" class="img-fluid img_project" alt="">
+        <img src="../../assets/about/dream.jpg" class="img-fluid img_project" alt="">
       </div>
 
       <div class="container-fluid  col-md-6">
