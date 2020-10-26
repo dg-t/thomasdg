@@ -104,4 +104,8 @@ html {
   transition: all 0.5s ease;
 }
 
+
+/* @media only screen and (max-width: 767px)  {
+
+} */
 </style>
