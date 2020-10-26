@@ -3,7 +3,7 @@
     <base-heading>What can I can offer...</base-heading>
     <section class="row container-fluid distribution_cards">
 
-            <div class="custom_card col-sm-6 col-md-4" v-for="skill in skills" :key="skill.id">
+            <div class="custom_card col-sm-6 col-lg-4" v-for="skill in skills" :key="skill.id">
                 <div class="card ">
                     <img class="card-img-top" 
                         :src="skill.image" 
@@ -125,28 +125,7 @@ img {
     width: auto;
 }
 
-/** CARDS TEXT */
-
-/* .card__body {
-    height: 220px;
-}  */
 
 
-/** FLEXBOX */
-/* .distribution_cards {
-    display:flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 50px 0;
-    max-width:1250px;
-}
-
-.custom_card {
-    flex: 1 0 20%;
-    height: auto;
-    margin: 30px 3%;
-    box-shadow: 1px 2px 2px  #888888;
-    transition: all 1s ease;
-} */
 
 </style>

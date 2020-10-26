@@ -5,28 +5,28 @@
     <base-heading>Some of the technologies I use...</base-heading>
     
     <div class="row icon_container">
-        <div class="col-md-4 mb-5 animate__animated" style="opacity:0;"
-            :class="[{animate__fadeInTopLeft: scrollWindow > 1700}, {visible: scrollWindow > 1700}]">
+        <div class="col-sm-6 col-md-4 mb-5 animate__animated isVisible"
+            :class="[{animate__fadeInTopLeft: scrollWindow > 1700 && innerWidth > 767}, {visible: scrollWindow > 1700}]">
             <img src="../../../assets/icons/skills_techs/html_icon.svg" class="" alt="js icon">
         </div>
-        <div class="col-md-4 mb-5 animate__animated" style="opacity:0;"
-            :class="[{animate__fadeInDown: scrollWindow > 1700}, {visible: scrollWindow > 1700}]">
+        <div class="col-sm-6  col-md-4 mb-5 animate__animated isVisible"
+            :class="[{animate__fadeInDown: scrollWindow > 1700 && innerWidth > 767}, {visible: scrollWindow > 1700}]">
             <img src="../../../assets/icons/skills_techs/css_icon.svg" alt="js icon">
         </div>
-        <div class="col-md-4 mb-5 animate__animated" style="opacity:0;"
-            :class="[{animate__fadeInTopRight: scrollWindow > 1700}, {visible: scrollWindow > 1700}]">
+        <div class="col-sm-6 col-md-4 mb-5 animate__animated isVisible" 
+            :class="[{animate__fadeInTopRight: scrollWindow > 1700 && innerWidth > 767}, {visible: scrollWindow > 1700}]">
             <img src="../../../assets/icons/skills_techs/javascript_icon.svg" alt="js icon">
         </div>
-        <div class="col-md-4 mt-5 animate__animated" style="opacity:0;"
-            :class="[{animate__fadeInBottomLeft: scrollWindow > 1900}, {visible: scrollWindow > 1900}]">
+        <div class="col-sm-6  col-md-4 mt-5 animate__animated isVisible" 
+            :class="[{animate__fadeInBottomLeft: scrollWindow > 1900 && innerWidth > 767}, {visible: scrollWindow > 1900}]">
             <img src="../../../assets/icons/skills_techs/vue_icon.svg" alt="js icon">
         </div>
-        <div class="col-md-4 mt-5 animate__animated" style="opacity:0;"
-            :class="[{animate__fadeInUp: scrollWindow > 1900}, {visible: scrollWindow > 1900}]">
+        <div class="col-sm-6  col-md-4 mt-5 animate__animated isVisible" 
+            :class="[{animate__fadeInUp: scrollWindow > 1900 && innerWidth > 767}, {visible: scrollWindow > 1900}]">
             <img src="../../../assets/icons/skills_techs/node_icon.svg" alt="js icon">
         </div>
-        <div class="col-md-4 mt-5 animate__animated" style="opacity:0;"
-            :class="[{animate__fadeInBottomRight: scrollWindow > 1900}, {visible: scrollWindow > 1900}]">
+        <div class="col-sm-6  col-md-4 mt-5 animate__animated isVisible"
+            :class="[{animate__fadeInBottomRight: scrollWindow > 1900 && innerWidth > 767}, {visible: scrollWindow > 1900}]">
             <img src="../../../assets/icons/skills_techs/python_icon.svg" alt="js icon">
         </div>
     </div>
@@ -43,12 +43,14 @@ export default {
   data() {
     return {
       show: false,
-      scrollWindow: null
+      scrollWindow: null,
+      innerWidth: null
     }
   },
   methods: {
     isScrolled() {
-      this.scrollWindow = window.scrollY
+      this.scrollWindow = window.scrollY;
+      this.innerWidth = window.innerWidth;
     }
   },
   mounted() {
@@ -59,6 +61,8 @@ export default {
 </script>
 
 <style scoped>
+
+/** TODO IMPROVE ANIMATION WITH CUSTOM DIRECTIVE */
 
 /** ICONS */
 
@@ -80,12 +84,14 @@ img {
     opacity: 1;
 }
 
-/** LOWER HEADING */
+.isVisible {
+  opacity: 0;
+}
 
-/* .custom-heading {
-  font-size: 180%;
-  font-weight: 320;
-  padding: 40px;
-  background-color: #fafafa
-} */
+
+@media only screen and (max-width: 767px) {
+  .isVisible {
+  opacity: 1;
+}
+}
 </style>

@@ -1,7 +1,7 @@
 <template>
 
     <div class="row container_feature">
-      <div class="col-md-6 center p-2 design_two">
+      <div class="col-md-6 center design_two">
         Websites made with love... <br />Where creativity and technology work together!
       </div>
       <div class="col-md-6 img_container design">
@@ -13,7 +13,7 @@
       <div class="col-md-6 img_container design_two">
         <img src="../../../assets/home/organised.jpg" class="img_responsive" alt="organised img">
       </div>
-      <div class="col-md-6 center p-2">
+      <div class="col-md-6 center p-0 m-0">
         Modern Responsive Websites <br />Stunning design...
       </div>
     </div> 
@@ -35,7 +35,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 /** TODO REMOVE IMAGE FOR MOBILE */
@@ -53,6 +52,7 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  letter-spacing: 1px;
 }
 
 /** IMAGE */
@@ -77,7 +77,7 @@ img {
     top: 10%;
     right:0;
     height:90%;
-    }
+}
 
 .img_responsive {
     bottom: 0;
@@ -112,5 +112,18 @@ img {
     transition: opacity 1s;
 
 }
+
+/** MEDIA QUERY */
+
+@media only screen and (max-width: 767px) {
+  .container_feature {
+    height: 180px;
+    padding: 30px 20px;
+  }
+  .img_container {
+    display: none;
+  }
+}
+
 
 </style>
