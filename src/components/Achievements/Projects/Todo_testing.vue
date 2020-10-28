@@ -1,11 +1,11 @@
 <template>
   <section class="container-fluid pl-0 pr-0">
 
-    <div class="section-color">
-      <h2 class="text-center p-5 mb-5">Todo Testing</h2>
+    <div class="section-color header_project_description">
+      <h2 class="text-center heading_project_description">Todo Testing</h2>
     </div>
 
-    <div class="py-5 container">
+    <div class="container-fluid container__porject_description">
       <p>For this project I work on an existing codebase, adding unit tests, fixing possible bugs, and optimizing performance.</p>
       <p>Tests are added using the Jasmine, a behaviour-driven development framework for testing in JavaScript.</p>
         <h4 class="py-3">Step 1: Fix the bugs</h4>
@@ -14,8 +14,8 @@
         <p>Once the application is working as it should, I have improved the code optimizing loops and logging statements.</p>
     </div>
 
-    <div class="py-5 section-color">
-      <div class="container">
+    <div class="section-color">
+      <div class="container-fluid container__porject_description">
         <h4 class="py-3">Step 2: Add tests</h4>
         <p>The project has already some tests included, but not enough to ensure the correct functionality</p>
         <p>A real test foundation to support the project has been created. This way I make sure to don't brake anything in future code implementations.</p>
@@ -23,7 +23,7 @@
       </div>
     </div>
 
-    <div class="container py-5">
+    <div class="container-fluid container__porject_description">
         <h4 class="py-3">Step 3: Analyze performance</h4>
         <p>Analyze the performance of a competitor site in order to identify what works well and what doesn't.
           The competitor site analyzed is the following: <a href="http://todolistme.net/" class="link_customized" target="_blank">Competitor Site</a></p>
@@ -31,8 +31,8 @@
         <p>Write an audit performance document about the competitor's performance, understanding how it differs from our own app, and how to optimize performance when scaling the app.</p>
     </div>
 
-    <div class="py-5 section-color">
-      <div class="container">
+    <div class="section-color">
+      <div class="container-fluid container__porject_description">
         <h4 class="py-3">Step 4: Write technical documentation</h4>
         <p>Write technical documentation reading real-world example: <a href="https://www.atlassian.com/blog/add-ons/5-real-life-examples-beautiful-technical-documentation" class="link_customized" target="_blank">See examples</a></p>
         <p>The documentation will describe the project, how it works (technically), and include the audit performance.</p>
@@ -45,8 +45,8 @@
       <a class="project_btn" @click="feedback=!feedback">See Feedback</a>
     </div>
 
-    <section class="pb-5 separator section-color" v-if="feedback">
-      <div class="container">
+    <section class="separator section-color" v-if="feedback">
+      <div class="container-fluid feedback_container">
         <h4 class="py-3">Instructor feedback</h4>
         <p><b>1. Provide an assessment of the student's work and, if the project has to be reworked, write a few lines about the criteria the project does not currently meet:</b></p>
         <p>Project work satisfies all the requirements listed in the project brief.</p>

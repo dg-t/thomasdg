@@ -2,16 +2,18 @@
 
   <div class="row container-fluid projects">
 
+      <!-- Project description -->
       <div class="col-lg-5 project_description">
           <h3>{{ title }}</h3>
           <p class="container-fluid" v-html="description"></p>
-          <div class="button__mobile">
+          <div class="container__button_links">
               <router-link :to="'/achievements/'+id" class="button_links">Description</router-link>
               <a :href="github_link" class="button_links" target="_blank">Source Code</a>
               <a :href="webpage_link" class="button_links" target="_blank" v-if="webpage_link">Webpage</a>
           </div>
       </div>
       
+      <!-- Image -->
       <div class="col-lg-7 image_container" v-if="id !='restaurant-reviews'">
         <p class="ghost_text" v-if="show">{{title}}</p>
         <div :class="{image_scroll: id == 'testing-todo-app' || id == 'film-festival' }">
@@ -19,7 +21,7 @@
         </div>
       </div>
 
-      <!-- Test -->
+      <!-- Restaurant Review project image -->
       <div class="col-lg-7 flip-box" v-if="id=='restaurant-reviews'">
         <div class="flip-box-inner">
           <p class="ghost_text" v-if="show">{{title}}</p>
@@ -27,8 +29,6 @@
             <img :src="image_two" class="flip-box-back img-fluid image_box" :alt="title">
         </div>
       </div>
-
-      <!-- End Test -->
 
   </div>
   
@@ -48,9 +48,6 @@ export default {
 
 <style scoped>
 
-/** TODO CHANGE image_scroll SIZE FOR MOBILE */
-/** TODO CHANGE BUTTONS ARRANGMENT FOR MOBILE */
-
 /** GENERAL */
 
 h3 {
@@ -62,6 +59,7 @@ h3 {
   margin: 0 auto;
 }
 
+
 /** IMAGE */
 
 .image_container {
@@ -70,21 +68,6 @@ h3 {
   justify-content: center;
   align-items: center;
   padding-right: 1.5em;
-}
-
-.image_scroll {
-  height: 400px;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-.ghost_text {
-  position: absolute;
-  z-index: 1000;
-  color:white;
-  display:flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .img_project {
@@ -99,9 +82,25 @@ h3 {
   filter: brightness(100%);
 }
 
+.ghost_text {
+  position: absolute;
+  z-index: 1000;
+  color:white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/** SCROLL IMAGE */
+
+.image_scroll {
+  height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 /** FLIP IMAGE */
 
-/** TODO add height 200px for mobile */
 .flip-box {
   background-color: transparent;
   padding: 25px 70px 0 50px;
@@ -139,9 +138,6 @@ h3 {
   transform: rotateY(180deg);
 }
 
-/* .image_box {
-  max-height: 100%;
-} */
 
 /** TEXT DESCRIPTION */
 
@@ -156,7 +152,7 @@ h3 {
   letter-spacing: 0.4px;
 }
 
-.button__mobile {
+.container__button_links {
     display:flex;
     justify-content: center;
     width: 100%;
@@ -190,6 +186,7 @@ a:hover {
 /** MEDIA QUERY */
 
 @media only screen and (min-width: 1800px)  {
+
   /** IMAGE FLIP */
   .flip-box {
     height: 530px !important;
@@ -247,7 +244,7 @@ a:hover {
     width: 80%;
     margin-left:10%;
   }
-  .button__mobile {
+  .container__button_links {
     display: flex;
     justify-content:center;
     width:50%;
@@ -358,6 +355,7 @@ a:hover {
   /** IMAGE SCROLL */
   .image_scroll {
     height: 160px;
+    margin-bottom: 20px;
   }
 
   /** BUTTONS */
@@ -366,7 +364,5 @@ a:hover {
     margin-bottom: 20px;
     margin-top: 0;
   }
-
-
 }
 </style>

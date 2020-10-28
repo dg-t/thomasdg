@@ -1,13 +1,13 @@
 <template>
   <section class="container-fluid pl-0 pr-0">
 
-    <div class="section-color">
-      <h2 class="text-center p-5 mb-5">Dice Game</h2>
+    <div class="section-color header_project_description">
+      <h2 class="text-center heading_project_description">Dice Game</h2>
     </div>
 
-    <div class="py-5 container">
+    <div class="container-fluid container__porject_description">
       <h4 class="py-3">Game Rules:</h4>
-      <ul>
+      <ul class="list__project">
         <li>The game has 2 players, playing in rounds</li>
         <li>Players can set the score to reach.</li>
         <li>In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score.</li>

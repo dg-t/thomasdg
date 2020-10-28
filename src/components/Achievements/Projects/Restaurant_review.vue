@@ -1,15 +1,15 @@
 <template>
   <section class="container-fluid pl-0 pr-0">
 
-    <div class="section-color">
-      <h2 class="text-center p-5 mb-5">Restaurant review</h2>
+    <div class="section-color header_project_description">
+      <h2 class="text-center heading_project_description">Restaurant review</h2>
     </div>
 
-    <div class="py-5 container">
+    <div class="container-fluid container__porject_description">
       <p>This project was made by following the instructions below:</p>
       <h4 class="py-3">Step 1</h4>
       <p>Build and organize the application foundation in 2 main sections:</p>
-      <ul>
+      <ul class="list__project">
         <li>A Google Maps map loaded with the <b>Google Maps API.</b></li>
         <li>A list of restaurants on the right side of the page that are within the area displayed on the map</li>
       </ul>
@@ -20,11 +20,11 @@
       <p>A filter tool allows the display of restaurants that have between X and Y stars. The map will be updated in real-time to show the corresponding restaurants.</p>
     </div>
 
-    <div class="py-5 section-color">
-      <div class="container">
+    <div class="section-color">
+      <div class="container-fluid  container__porject_description">
         <h4 class="py-3">Step 2: Add restaurants and reviews</h4>
         <p>Visitors can also interact with the map by:</p>
-        <ul>
+        <ul class="list__project">
           <li><b>Adding a review</b> to any of the restaurants.</li>
           <li><b>Add their very own restaurant</b> by clicking on a specific place on the map</li>
         </ul>
@@ -33,7 +33,7 @@
       </div>
     </div>
 
-    <div class="container pt-5">
+    <div class="container-fluid container__porject_description">
       <h4 class="py-3">Step 3: Integration with Google Places API</h4>
       <p>
         Use <b>Google Places API</b> to retrieve restaurants and reviews on the map!
@@ -47,13 +47,13 @@
     </div>
 
 
-    <section class="pb-5 separator section-color" v-if="feedback">
-      <div class="container">
+    <section class="separator section-color" v-if="feedback">
+      <div class="container-fluid feedback_container">
         <h4 class="py-3">Instructor Feedback</h4>
         <p><b>1. Provide an assessment of the student's work and, if the project has to be reworked, write a few lines about the criteria the project does not currently meet:</b></p>
         <p>Thomas has completed all the deliverables and a good explanation of his restaurant review web application.</p>
         <p><b>2. Assessment of the project deliverables against the project criteria:</b></p>
-        <ul>
+        <ul class="list__project">
           <li>He has completed the project coding in JS with all the user features, restaurant features and maps utilization.</li>
           <li>He has used clean coding practices.</li>
           <li>Made good use of DevTools.</li>
