@@ -1,5 +1,5 @@
 <template>
-  <section class=" container-fluid mt-0">
+  <section class="container-fluid mt-0">
     <div class="form-heading">
       <div class="icon-contact">
         <h4>Send me an Email</h4>
@@ -137,6 +137,11 @@ export default {
 </script>
 
 <style scoped>
+
+/** GLOBAL */
+section {
+  overflow-x: hidden;
+}
 
 /** FORM */
 
@@ -320,7 +325,7 @@ img {
   form {
     margin: 5% auto;
     width: 90%;
-    padding: 0.8rem;
+    padding: 0.8rem !important;
   }
   button {
     font-size: 90%;
