@@ -14,7 +14,8 @@
               aria-label="Toggle navigation"
               @click="toggleNavBarBtn"
               >
-              <i class="fas fa-bars icon__toggleBtn"></i>
+              <i class="fas fa-bars icon__toggleBtn" v-if="!show"></i>
+              <i class="fas fa-times icon__toggleBtn" v-if="show"></i>
           </button>
 
           <!-- collapse navBar for smaller screens -->

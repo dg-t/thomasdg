@@ -54,7 +54,6 @@ section {
     border: 1px solid rgba(0, 170, 255, 0.4);
     padding:10%;
     margin-top: 10%;
-
 }
 
 /** ICONS STYLE */
@@ -86,5 +85,13 @@ section {
 /** DESCRIPTION ICONS */
 .description {
     letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 500px) {
+
+    /** CONTAINER ICONS */
+    .icon-container {
+        padding:20px !important;
+    }
 }
 </style>
