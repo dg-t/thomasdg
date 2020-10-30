@@ -1,7 +1,7 @@
 <template>
   <!-- NavBar -->
     <div class="container">
-      <nav  class="navbar navbar-expand-md navbar-light pt-3 fixed-top" 
+      <nav  class="navbar navbar-expand-sm navbar-light fixed-top customized_nav" 
             :class="[{updateColor: scrollWindow > 10 || show  }, {contactFormNavigation: $route.meta.headerSection  }]">
           <button 
               class="navbar-toggler bg-white"
@@ -14,23 +14,24 @@
               aria-label="Toggle navigation"
               @click="toggleNavBarBtn"
               >
-              <i class="fas fa-bars toggleBtn"></i>
+              <i class="fas fa-bars icon__toggleBtn" v-if="!show"></i>
+              <i class="fas fa-times icon__toggleBtn" v-if="show"></i>
           </button>
 
           <!-- collapse navBar for smaller screens -->
           <div class="collapse navbar-collapse" id="navbarSupportedContent" :class="{ 'show': show }">
             <ul class="navbar-nav" >
               <li>
-                <router-link to="/">Home</router-link>
+                <router-link to="/" @click="toggleNavBarBtn">Home</router-link>
               </li>
               <li>
-                <router-link to="/about">About</router-link>
+                <router-link to="/about" @click="toggleNavBarBtn">About</router-link>
               </li>
               <li>
-                <router-link to="/achievements">Achievements</router-link>
+                <router-link to="/achievements" @click="toggleNavBarBtn">Achievements</router-link>
               </li>
               <li>
-                <router-link to="/contact-me">Contact Me</router-link>
+                <router-link to="/contact-me" @click="toggleNavBarBtn">Contact Me</router-link>
               </li>
             </ul>
           </div>
@@ -66,23 +67,24 @@ export default {
 
 /** NAV */
 
-nav {
+.customized_nav {
   border-bottom: 1px solid white;
   padding-bottom: 25px;
   padding-top: 25px;
-  transition: padding 0.6s;
-}
-
-.contactFormNavigation {
-  background-color: #505050;
-  padding-bottom: 25px;
-  padding-top: 25px;
+  transition: all 0.6s;
 }
 
 .updateColor {
   background-color: rgb(80, 80, 80);
   padding-bottom: 10px;
   padding-top: 10px;
+  transition: all 0.3s ease-out;
+}
+
+/** NAV CONTACT FORM */
+.contactFormNavigation {
+  background-color: #505050;
+  padding: 25px 0;
 }
 
 /** NAV LINKS */
@@ -119,13 +121,13 @@ li {
 /** TOGGLE BUTTON */
 
 button {
-    outline: none;
-    box-shadow: 0 0 3px 2px #0af;
+  border-radius: 15px;
 }
 
 button:hover,
 button:focus {
-    border: 1px solid #0af;
+    outline: none;
+    box-shadow: 0 0 3px 2px #0af;
 }
 
 .btnClose {
@@ -142,15 +144,41 @@ button:focus {
   transition: all 1s ease;
 }
 
-.toggleBtn {
+.icon__toggleBtn {
     color:#0af;
     opacity:0.7;
     transition: opacity 0.4s;
 }
 
-.toggleBtn:hover {
+.icon__toggleBtn:hover {
     opacity:1;
     transition: opacity 0.4s;
+}
+
+@media only screen and (max-width: 575px)  {
+
+  /** NAV */
+  .customized_nav {
+    border-bottom: none;
+    padding:0 ;
+  }
+
+  /** NAV LINKS */
+
+  ul {
+    padding: 20px 0;
+  }
+  a {
+    transition: border-bottom 0.3s;
+    opacity:0.8;
+    letter-spacing: 1px;
+  }
+  a:hover,
+  a.active {
+    padding-bottom:5px;
+    border-bottom: 1px solid rgb(66, 156, 252);
+  }
+
 }
 
 </style>

@@ -23,8 +23,9 @@ export default {
   background-color: #f4f4f4;
   letter-spacing: 5px;
   word-spacing: 2px;
-  
 }
+
+
 
 .custom-heading {
   font-size: 180%;
@@ -57,6 +58,50 @@ export default {
 .custom-heading:hover:after { 
   transform: scaleX(0);
   transform-origin:0 50%;
+}
+
+/** MEDIA QUERY */
+
+@media only screen and (max-width: 767px) {
+
+  .heading {
+    position:relative;
+    background-color: #e3e3e3;
+    letter-spacing: 3px;
+    word-spacing: 1px;
+  }
+
+  .custom-heading {
+    font-weight: 350;
+    font-size: 150%;
+    padding: 8% 3% !important; 
+    font-style: italic;
+  }
+
+  .custom-heading:before {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+}
+
+  .custom-heading:after {
+    position: absolute;
+    bottom:0;
+    left:10%;
+    width: 80%;
+  }
+
+  .custom-heading:hover:after { 
+    transform: scaleX(1);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .custom-heading {
+    padding: 10% 3% !important; 
+    line-height: 1.4;
+  }
 }
 
 </style>

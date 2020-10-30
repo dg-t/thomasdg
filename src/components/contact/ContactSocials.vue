@@ -41,17 +41,12 @@ export default {
 
 <style scoped>
 
-footer {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../assets/footer/desktop.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    font-size: 60%;
-    position:relative;
-    height:250px;
+/** GLOBAL */
+section {
+    overflow-x: hidden;
 }
 
+/** CONTAINER ICONS */
 
 .icon-container {
     display:flex;
@@ -59,9 +54,9 @@ footer {
     border: 1px solid rgba(0, 170, 255, 0.4);
     padding:10%;
     margin-top: 10%;
-
 }
 
+/** ICONS STYLE */
 .icon-contact {
     display: flex;
     flex-direction: column;
@@ -87,7 +82,16 @@ footer {
     transition: all 0.5s ease;
 }
 
+/** DESCRIPTION ICONS */
 .description {
     letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 500px) {
+
+    /** CONTAINER ICONS */
+    .icon-container {
+        padding:20px !important;
+    }
 }
 </style>

@@ -31,6 +31,15 @@ header {
   margin-top:90px;
   letter-spacing: 5px;
   word-spacing: 2px;
+  transition: all 0.1s ease-in;
+  overflow-x: hidden;
+}
+
+@media only screen and (max-width: 575px)  {
+  header {
+    margin-top:0;
+    transition: all 0.1s ease-in;
+  }
 }
 
 </style>

@@ -46,4 +46,10 @@ export default {
   height: 60vh;
 }
 
+@media only screen and (max-width: 1024px)  {
+  .header-about {
+    background-position: 26% 0%;
+  }
+}
+
 </style>

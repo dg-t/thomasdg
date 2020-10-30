@@ -1,14 +1,14 @@
 <template>
   <section class="container-fluid pl-0 pr-0">
 
-    <div class="section-color">
-      <h2 class="text-center p-5 mb-5">Film Festival</h2>
+    <div class="section-color header_project_description">
+      <h2 class="text-center heading_project_description">Film Festival</h2>
     </div>
 
-    <div class="py-5 container">
+    <div class="container-fluid container__porject_description">
       <h4 class="py-3">Web Design</h4>
       <p> In this project I developed a website for an outdoor film festival in Boston.</p>
-      <ul>
+      <ul class="list__project">
         <li>The films are shown from August 5th to 8th in Boston Public Garden.</li>
         <li>The event and the website, will aim to audience of all ages.</li>
       </ul>
@@ -17,12 +17,12 @@
         Its a simple page with a form that doesn't actually submit data to a real codebase. Its more about the design.</p>
     </div>
       
-    <div class="py-5 section-color">
-      <div class="container">
+    <div class="section-color">
+      <div class="container-fluid container__porject_description">
         <h4 class="py-3">Documentation</h4>
         <p>I also privided a project brief to the client with the logisticals and technicals details.</p>
         <p>The project brief includes:</p>
-        <ul>
+        <ul class="list__project">
           <li>Summary</li>
           <li>Stajeholders</li>
           <li>Goals</li>
@@ -40,8 +40,8 @@
       <a class="project_btn" @click="feedback=!feedback">See Feedback</a>
     </div>
 
-    <section class="pb-5 separator section-color" v-if="feedback">
-      <div class="container">
+    <section class="separator section-color" v-if="feedback">
+      <div class="container-fluid feedback_container">
         <h4 class="py-3">Instructor feedback</h4>
         <p><b>Summary:</b></p>
         <p>Thomas has done a fantastic job with his website! <br />

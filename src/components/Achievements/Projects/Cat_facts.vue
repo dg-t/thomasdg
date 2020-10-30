@@ -1,13 +1,13 @@
 <template>
   <section class="container-fluid pl-0 pr-0">
 
-    <div class="section-color">
-      <h2 class="text-center p-5 mb-5">Cat Facts</h2>
+    <div class="section-color header_project_description">
+      <h2 class="text-center heading_project_description">Cat Facts</h2>
     </div>
 
-    <div class="py-5 container">
+    <div class="container-fluid container__porject_description">
       <p>For this project I made a SPA with pure JavaScript ES6 and Rest API, following the instructions below:</p>
-      <ul>
+      <ul class="list__project">
         <li>This page is made with <b>JavaScript ES6</b>, including classes, constructors, promises and more.</li>
         <li>The style are made with HTML, CSS, and Bootstrap.</li>
         <li>The Rest API I used is cat-facts: <a href="https://alexwohlbruck.github.io/cat-facts/docs/" class="link_customized"  target="_blank">@alexwohlbruc</a></li>

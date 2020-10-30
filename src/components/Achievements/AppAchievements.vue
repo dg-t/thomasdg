@@ -47,12 +47,12 @@ export default {
         {
           id: "testing-todo-app",
           title: "Testing todo app",
-          description: `For this project, I worked on an existing codebase and improved the code.<br />
+          description: `<p>For this project, I worked on an existing codebase and improved the code.<br /><br />
                           Task included:
                           <ul class="pl-3"><li>Find and fix bugs.</li>
                           <li>Add new unit tests with Jasmine Framework.</li>
                           <li>Analyze website performance and write an audit performance document.</li>
-                          <li>Write technical documentation for the website.</li></ul>`,
+                          <li>Write technical documentation for the website.</li></ul></p>`,
           image: require("../../assets/projects/testing.png"),
           github_link: "https://github.com/dg-t/todosAppTesting"
         },
@@ -119,6 +119,161 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+
+/** PROJECTS DESCRIPTION GLOBAL */
+
+.heading_project_description {
+  padding: 50px !important;
+}
+
+.header_project_description::after {
+  display:block;
+  content: '';
+  border-bottom: solid 1px #0af;  
+}
+
+/** CONTAINER SECTION PROJECTS */
+
+.container__porject_description {
+  padding: 80px;
+  margin: auto;
+}
+  
+/** CONTAINER SECTION FEEDBACK */
+
+.feedback_container {
+  padding: 20px 80px 80px 80px;
+  margin: auto;
+}
+
+/** LIST PROJECTS DESCRIPTION */
+
+.list__project {
+  margin-left: 40px;
+}
+
+/** LINKS */
+
+.link_customized {
+  display: inline-block;
+  position:relative;
+}
+
+.link_customized::after {
+  display:block;
+  content: '';
+  border-bottom: solid 1px #0af;  
+  transform: scaleX(0);  
+  transition: transform 0.5s ease-in-out;
+  transform-origin:bottom right;
+  transform-origin:100% 50%;
+}
+.link_customized:hover:after { 
+  transform: scaleX(1);
+  transform-origin:bottom left;
+}
+
+/** LINK BACK TO PROJECT */
+
+.project_btn_container {
+  height: 180px;
+  position: relative;
+}
+
+.project_btn {
+  padding: 5px 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 85%;
+  white-space: nowrap;
+  text-align: center;
+  cursor: pointer;
+  background-color: white;
+  color: #07c;
+  border: 1px solid #0af;
+  border-radius: 5px;
+  box-shadow: 1px 2px 2px  #888888;
+  text-decoration: none !important;
+}
+
+.project_btn:hover {
+  color: white !important;
+  background-color: #0af;
+  transition: all 0.5s ease;
+}
+
+/** MEDIA QUERY PROJECTS */
+
+@media only screen and (max-width: 767px)  {
+
+  /** CONTAINER SECTION PROJECTS */
+  .container__porject_description {
+    padding: 50px;
+    margin: auto;
+  }
+
+  /** FEEDBACK CONTAINER */
+  .feedback_container {
+    padding: 0px 50px 50px 50px;
+    margin: auto;
+  }
+
+  /** LIST PROJECTS DESCRIPTION */
+  .list__project {
+    margin-left: 35px;
+  }
+
+  /** FEEDBACK SEPARATOR */
+  .separator:before {
+    margin-bottom: 40px;
+  }
+
+  /** BUTONS PROJECTS DESCRIPTION */
+  .project_btn_container {
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 500px)  {
+
+  /** HEADING PROJECTS */
+  .heading_project_description {
+    padding: 30px 20px !important;
+  }
+
+  /** CONTAINER SECTION PROJECTS */
+  .container__porject_description {
+    padding: 20px 25px !important;
+    margin: auto;
+  }
+
+  /** FEEDBACK CONTAINER */
+  .feedback_container {
+    padding: 0 25px 20px 25px;
+    margin: auto;
+  }
+  
+  /** LIST PROJECTS DESCRIPTION */
+  .list__project {
+    margin-left: 25px;
+  }
+
+  /** BUTONS PROJECTS DESCRIPTION */
+  .project_btn_container {
+    height: 120px;
+  }
+
+  /** FEEDBACK SEPARATOR */
+  .separator:before {
+    margin-bottom: 30px;
+  }
+  .section-color {
+    padding: 0 !important;
+  }
+}
 
 </style>

@@ -3,7 +3,7 @@
   <section class="container-fluid p-0 m-0">
 
     <home-header></home-header>
-    <base-heading>Imagine it, design it, create it!</base-heading>
+    <base-heading class="custom_heading">Imagine it, design it, create it!</base-heading>
     <home-features></home-features>
     <home-tech></home-tech> 
     <home-skills></home-skills>
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import HomeHeader from './HomeHeader/HomeHeader.vue'
+import HomeHeader from '../Header/HomeHeader/HomeHeader.vue'
 import HomeFeatures from './HomeSections/HomeFeatures.vue'
 import HomeTech from './HomeSections/HomeTechs.vue'
 import HomeSkills from './HomeSections/HomeSkills.vue'
@@ -34,5 +34,11 @@ section {
   max-width: 100%;
   overflow-x: hidden;
 }
+
+/* @media only screen and (max-width: 767px) {
+  .custom_heading {
+    font-size: 90%;
+  }
+} */
 
 </style>

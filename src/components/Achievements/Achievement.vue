@@ -2,18 +2,18 @@
 
   <div class="row container-fluid projects">
 
+      <!-- Project description -->
       <div class="col-lg-5 project_description">
           <h3>{{ title }}</h3>
-          <p v-html="description"></p>
-          <div class="button_links">
-            <router-link :to="'/achievements/'+id">Description</router-link>
-            <a :href="github_link" target="_blank">Source Code</a>
-          </div>
-          <div class="button_links">
-            <a :href="webpage_link" target="_blank" v-if="webpage_link">Webpage</a>
+          <p class="container-fluid" v-html="description"></p>
+          <div class="container__button_links">
+              <router-link :to="'/achievements/'+id" class="button_links">Description</router-link>
+              <a :href="github_link" class="button_links" target="_blank">Source Code</a>
+              <a :href="webpage_link" class="button_links" target="_blank" v-if="webpage_link">Webpage</a>
           </div>
       </div>
       
+      <!-- Image -->
       <div class="col-lg-7 image_container" v-if="id !='restaurant-reviews'">
         <p class="ghost_text" v-if="show">{{title}}</p>
         <div :class="{image_scroll: id == 'testing-todo-app' || id == 'film-festival' }">
@@ -21,20 +21,14 @@
         </div>
       </div>
 
-      <!-- Test -->
+      <!-- Restaurant Review project image -->
       <div class="col-lg-7 flip-box" v-if="id=='restaurant-reviews'">
         <div class="flip-box-inner">
           <p class="ghost_text" v-if="show">{{title}}</p>
-          <div class="flip-box-front">
-            <img :src="image" class="img-fluid" :alt="title">
-          </div>
-          <div class="flip-box-back">
-            <img :src="image_two" class="img-fluid" :alt="title">
-          </div>
+            <img :src="image" class="flip-box-front img-fluid image_box" :alt="title">
+            <img :src="image_two" class="flip-box-back img-fluid image_box" :alt="title">
         </div>
       </div>
-
-      <!-- End Test -->
 
   </div>
   
@@ -52,18 +46,19 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-/** TODO CHANGE image_scroll SIZE FOR MOBILE */
-/** TODO CHANGE BUTTONS ARRANGMENT FOR MOBILE */
-
 /** GENERAL */
+
+h3 {
+    padding: 20px 0;
+  }
 
 .projects {
   padding: 50px 0;
   margin: 0 auto;
 }
+
 
 /** IMAGE */
 
@@ -75,10 +70,16 @@ export default {
   padding-right: 1.5em;
 }
 
-.image_scroll {
-  height: 400px;
-  overflow-y: auto;
-  overflow-x: hidden;
+.img_project {
+  width: 100%;
+  filter: brightness(50%);
+  padding:5%;
+  transition: all 1s ease;
+}
+
+.img_project:hover {
+  transform: scale(1.05);
+  filter: brightness(100%);
 }
 
 .ghost_text {
@@ -90,24 +91,20 @@ export default {
   align-items: center;
 }
 
-.img_project {
-  filter: brightness(50%);
-  padding:5%;
-  transition: all 1s ease;
-}
+/** SCROLL IMAGE */
 
-.img_project:hover {
-  transform: scale(1.05);
-  filter: brightness(100%);
+.image_scroll {
+  height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 /** FLIP IMAGE */
 
-/** TODO add height 200px for mobile */
 .flip-box {
   background-color: transparent;
-  padding: 5%;
-  /* height:200px; */
+  padding: 25px 70px 0 50px;
+  height: 400px;
 }
 
 .flip-box-inner {
@@ -130,7 +127,6 @@ export default {
   filter: brightness(80%);
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -142,21 +138,29 @@ export default {
   transform: rotateY(180deg);
 }
 
+
 /** TEXT DESCRIPTION */
 
 .project_description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 3em 1em 1em 2em;
   font-size: 80%;
   word-spacing: 1px;
   letter-spacing: 0.4px;
 }
 
+.container__button_links {
+    display:flex;
+    justify-content: center;
+    width: 100%;
+  }
+
 .button_links {
-  display: flex;
-  justify-content: space-around;
-  justify-items: center;
-  width: 80%;
-  margin: 10% 0 0 0;
+  display: inline-block;
+  margin: 8% 5% 0 0;
 }
 
 a {
@@ -179,4 +183,186 @@ a:hover {
   transition: all 0.5s ease;
 }
 
+/** MEDIA QUERY */
+
+@media only screen and (min-width: 1800px)  {
+
+  /** IMAGE FLIP */
+  .flip-box {
+    height: 530px !important;
+    padding: 25px 90px 0 70px;
+  }
+
+  /** IMAGE SCROLL */
+  .image_scroll {
+    height: 530px;
+  }
+}
+
+@media only screen and (min-width: 1500px)  {
+  /** IMAGE FLIP */
+  .flip-box {
+    height: 480px;
+  }
+
+  /** IMAGE SCROLL */
+  .image_scroll {
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 1100px)  {
+  /** IMAGE FLIP */
+  .flip-box {
+    height: 350px;
+  }
+
+  /** IMAGE SCROLL */
+  .image_scroll {
+    height: 350px;
+  }
+}
+
+@media only screen and (max-width: 991px)  {
+
+  /** GENERAL */
+  h3 {
+    padding: 30px 0;
+  }
+  .projects {
+    padding: 25px 0;
+  }
+  .project_description {
+    padding: 1em 1em 1em 2em;
+  }
+
+  /** IMAGES */
+  .img_project {
+    padding:20px 50px;
+  }
+  .image_container {
+    width: 80%;
+    margin-left:10%;
+  }
+  .container__button_links {
+    display: flex;
+    justify-content:center;
+    width:50%;
+  }
+
+  /** IMAGE FLIP */
+  .flip-box {
+    height: 400px;
+    width: 80%;
+    margin-left:10%;
+    padding: 20px 50px;
+  }
+
+  /** IMAGE SCROLL */
+  .image_scroll {
+    height: 350px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  /** BUTTONS */
+  .button_links {
+    display: inline-block;
+    width: 30%;
+    margin: 3%  2%;
+  }
+}
+
+@media only screen and (max-width: 767px)  {
+
+  /** GENERAL */
+  h3 {
+    padding-top: 0;
+    font-size: 170%;
+    font-weight: 400;
+  }
+
+  /** IMAGE FLIP */
+  .flip-box {
+    height: 300px;
+    padding: 25px 90px 0 70px;
+  }
+
+  /** IMAGE SCROLL */
+  .image_scroll {
+    height: 280px;
+  }
+  /** BUTTONS */
+  .button_links {
+    display: inline-block;
+    font-size: 80%;
+    width: 35%;
+    margin: 3%  2%;
+  }
+}
+
+@media only screen and (max-width: 600px)  {
+
+  /** GENERAL */
+  .project_description {
+    padding: 1em;
+  }
+
+  /** IMAGES */
+  .image_container {
+    padding-right: 0;
+  }
+
+  /** IMAGE FLIP */
+  .flip-box {
+    height: 220px;
+    padding: 25px 55px 0 55px;
+  }
+
+  /** IMAGE SCROLL */
+  .image_scroll {
+    height: 200px;
+  }
+
+  /** BUTTONS */
+  .button_links {
+    width: 40%;
+    margin: 3%  2%;
+  }
+}
+
+@media only screen and (max-width: 500px)  {
+
+  /** GENERAL */
+  .project_description {
+    padding: 1em;
+  }
+
+  /** IMAGES */
+  .image_container {
+    padding: 10px 0 0 0;
+  }
+  .img_project {
+    padding: 20px 25px;
+  }
+
+  /** IMAGE FLIP */
+  .flip-box {
+    height: 180px;
+    padding: 10px 25px 0 25px;
+  }
+
+  /** IMAGE SCROLL */
+  .image_scroll {
+    height: 160px;
+    margin-bottom: 20px;
+  }
+
+  /** BUTTONS */
+  .button_links {
+    width: 55%;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+}
 </style>
