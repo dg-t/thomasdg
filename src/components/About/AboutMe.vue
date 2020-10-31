@@ -1,115 +1,115 @@
 <template>
+  <div>
+    <achievements-header></achievements-header>
 
-  <achievements-header></achievements-header>
 
+    <section class="container-fluid row py-3 py-md-5 px-0 mx-0">
 
-  <section class="container-fluid row py-3 py-md-5 px-0 mx-0">
-
-    <div class="row container-fluid pb-2 pb-sm-4 pb-md-5 px-lg-5 mx-0">
-      <div class="container-fluid col-12">
-        <h4>A little bit about me...</h4>
-        <p>Hi! I am Thomas, a web developer in Barcelona, Spain. 
-          <br />
-          I born on January 1st, 1990 in Milano, Italy. In 2011 I moved to Barcelona, Spain, 
-          where I am currently living with my wonderful wife. 
-          <br />
-          I also spent five years travelling around Australia, where I had the opportunity to learn the English language. 
-          <br />
-          Other than that, I travelled in many different places around Europe, South America, Southeast Asia and Japan.
-          <br />
-          <br />
-        </p>
-      </div>
-    </div>
-
-    <div class="row section-color container-fluid px-lg-5 py-3 py-sm-4 py-md-5 mx-0">
-
-      <div class="col-lg-6 pr-lg-5">
-        <h4>My passions</h4>
-        <p>
-          There are three things I love the most, programming, travel, and food. 
-          <br />
-          <br />
-          I have worked as a chef for some time in my life, and I quickly learned to work under pressure, with reliability and precision.
-          <br />
-          In 2018, I came back to Barcelona, and I decided to pursue the biggest passion I always had in my life, becoming a web developer.
-          <br />
-          The reason why I love so much this job is that truly makes me feel accomplished. 
-          <br />
-          When I am coding a program, or an application, or a website, I feel like I am creating something from nothing. 
-          <br />
-          A simple idea becomes something real with some time and dedication. That makes me feel fulfilled.
-          <br />
-          <br />
-        </p>
+      <div class="row container-fluid pb-2 pb-sm-4 pb-md-5 px-lg-5 mx-0">
+        <div class="container-fluid col-12">
+          <h4>A little bit about me...</h4>
+          <p>Hi! I am Thomas, a web developer in Barcelona, Spain. 
+            <br />
+            I born on January 1st, 1990 in Milano, Italy. In 2011 I moved to Barcelona, Spain, 
+            where I am currently living with my wonderful wife. 
+            <br />
+            I also spent five years travelling around Australia, where I had the opportunity to learn the English language. 
+            <br />
+            Other than that, I travelled in many different places around Europe, South America, Southeast Asia and Japan.
+            <br />
+            <br />
+          </p>
+        </div>
       </div>
 
-      <div class="container image_container col-lg-6">
-        <img src="../../assets/about/travel.jpg" class="img-fluid img_project" alt="travel">
+      <div class="row section-color container-fluid px-lg-5 py-3 py-sm-4 py-md-5 mx-0">
+
+        <div class="col-lg-6 pr-lg-5">
+          <h4>My passions</h4>
+          <p>
+            There are three things I love the most, programming, travel, and food. 
+            <br />
+            <br />
+            I have worked as a chef for some time in my life, and I quickly learned to work under pressure, with reliability and precision.
+            <br />
+            In 2018, I came back to Barcelona, and I decided to pursue the biggest passion I always had in my life, becoming a web developer.
+            <br />
+            The reason why I love so much this job is that truly makes me feel accomplished. 
+            <br />
+            When I am coding a program, or an application, or a website, I feel like I am creating something from nothing. 
+            <br />
+            A simple idea becomes something real with some time and dedication. That makes me feel fulfilled.
+            <br />
+            <br />
+          </p>
+        </div>
+
+        <div class="container image_container col-lg-6">
+          <img src="../../assets/about/travel.jpg" class="img-fluid img_project" alt="travel">
+        </div>
+
       </div>
 
-    </div>
-
-    <div class="row container-fluid py-2 py-md-5 px-lg-5 mx-0">
-      <div class="container-fluid col-12">
-        <h4>Where I am now...</h4>
-        <p>
-          I got my start in the IT industry working full time as an eCommerce Webmaster Configurator at Sopra Steria, for Nespresso Company, where I currently am.
-          <br />
-          At night I am a full-time, self-taught student, studying the art of programming. 
-          <br />
-          I am passionate about many technologies, and I love to keep learning new technologies every day.
-          <br />
-          <br />
-          I mostly carried out my achievements with the use of HTML, CSS, JavaScript, Vue.js, and Node.js tracked with the git version control system.
-          <br />
-          I also have project experience with Unit Testing frameworks like 
-          Jasmine or Jest, other front-end frameworks/libraries like React, and  backend language like Python. 
-          <br />
-          I enjoy Web design and give attention to details. I have good problem-solving and analytic skills.
-          <br />
-          <br />
-        </p>
-      </div>
-    </div>
-
-    <div class="row section-color container-fluid mx-0 py-3 py-sm-4 py-md-5">
-
-      <div class="col-lg-5 image_container container">
-        <img src="../../assets/about/dream.jpg" class="img-fluid img_project" alt="">
+      <div class="row container-fluid py-2 py-md-5 px-lg-5 mx-0">
+        <div class="container-fluid col-12">
+          <h4>Where I am now...</h4>
+          <p>
+            I got my start in the IT industry working full time as an eCommerce Webmaster Configurator at Sopra Steria, for Nespresso Company, where I currently am.
+            <br />
+            At night I am a full-time, self-taught student, studying the art of programming. 
+            <br />
+            I am passionate about many technologies, and I love to keep learning new technologies every day.
+            <br />
+            <br />
+            I mostly carried out my achievements with the use of HTML, CSS, JavaScript, Vue.js, and Node.js tracked with the git version control system.
+            <br />
+            I also have project experience with Unit Testing frameworks like 
+            Jasmine or Jest, other front-end frameworks/libraries like React, and  backend language like Python. 
+            <br />
+            I enjoy Web design and give attention to details. I have good problem-solving and analytic skills.
+            <br />
+            <br />
+          </p>
+        </div>
       </div>
 
-      <div class="container-fluid  col-lg-6">
-        <h4>My Dreams</h4>
-        <p>
-          I travelled, I had fun, and I met a lot of people from everywhere around the world. <br />
-          Now my main goal is to strive in my career and improve the quality of life for my family.
-          <br />
-          <br />
-          My biggest dream is becoming an Amazing Senior Web Developer for a Company that promotes internal career growth and value hard work, honesty, and loyalty.
-          <br />
-          I like the idea, and the possibility to be part of a Team that try to change the world for the best.
-        </p>
+      <div class="row section-color container-fluid mx-0 py-3 py-sm-4 py-md-5">
+
+        <div class="col-lg-5 image_container container">
+          <img src="../../assets/about/dream.jpg" class="img-fluid img_project" alt="">
+        </div>
+
+        <div class="container-fluid  col-lg-6">
+          <h4>My Dreams</h4>
+          <p>
+            I travelled, I had fun, and I met a lot of people from everywhere around the world. <br />
+            Now my main goal is to strive in my career and improve the quality of life for my family.
+            <br />
+            <br />
+            My biggest dream is becoming an Amazing Senior Web Developer for a Company that promotes internal career growth and value hard work, honesty, and loyalty.
+            <br />
+            I like the idea, and the possibility to be part of a Team that try to change the world for the best.
+          </p>
+        </div>
+
       </div>
 
-    </div>
 
-
-    <div class="row container-fluid py-md-5 px-lg-5 mx-0">
-      <div class="container-fluid col-md-12">
-        <h4>My Qualifications</h4>
-        <p>
-          I successfully completed a Bachelor-Level Diploma in Web Development during one full year,
-          and I am currently studying a degree in an online American University in Computer Science.
-          <br />
-          Other qualifications I have are the Italian High school in Science, completed in Barcelona, Spain, and the Diploma in Hospitality Management, completed in Perth, Australia.
-          <br />
-        </p>
+      <div class="row container-fluid py-md-5 px-lg-5 mx-0">
+        <div class="container-fluid col-md-12">
+          <h4>My Qualifications</h4>
+          <p>
+            I successfully completed a Bachelor-Level Diploma in Web Development during one full year,
+            and I am currently studying a degree in an online American University in Computer Science.
+            <br />
+            Other qualifications I have are the Italian High school in Science, completed in Barcelona, Spain, and the Diploma in Hospitality Management, completed in Perth, Australia.
+            <br />
+          </p>
+        </div>
       </div>
-    </div>
 
-  </section>
-  
+    </section>
+  </div>
 </template>
 
 <script>

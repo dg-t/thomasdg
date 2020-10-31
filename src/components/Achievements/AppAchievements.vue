@@ -1,21 +1,21 @@
 <template>
-  
-  <achievements-header></achievements-header>
+  <div>
+    <achievements-header></achievements-header>
 
-  <section style="overflow: hidden" >
-    <app-achievements v-for="(project, index) in projects" 
-      :class="index % 2 == 0  ? '' : 'section-color'"
-      :key="index" 
-      :title="project.title"
-      :description="project.description"
-      :id="project.id"
-      :image="project.image"
-      :image_two="project.image_two"
-      :github_link="project.github_link"
-      :webpage_link="project.webpage_link"
-      > </app-achievements>
-  </section>
-
+    <section style="overflow: hidden" >
+      <app-achievements v-for="(project, index) in projects" 
+        :class="index % 2 == 0  ? '' : 'section-color'"
+        :key="index" 
+        :title="project.title"
+        :description="project.description"
+        :id="project.id"
+        :image="project.image"
+        :image_two="project.image_two"
+        :github_link="project.github_link"
+        :webpage_link="project.webpage_link"
+        > </app-achievements>
+    </section>
+  </div>
 </template>
 
 <script>

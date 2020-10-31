@@ -46,8 +46,12 @@ const router = createRouter({
 
 const app = createApp(App);
 
+app.component('base-heading', BaseHeading);
+
 app.use(router);
 
-app.component('base-heading', BaseHeading);
+/** To avoid route initial transition */
+// router.isReady().then(() => app.mount('#app'))
+
 
 app.mount('#app')

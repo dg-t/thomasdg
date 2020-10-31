@@ -1,13 +1,14 @@
 <template>
-  <header>
-    <base-heading>
-      Contact Me
-    </base-heading>
-  </header>
+  <div>
+    <header>
+      <base-heading>
+        Contact Me
+      </base-heading>
+    </header>
 
-  <contact-form></contact-form>
-  <contact-socials></contact-socials>
-
+    <contact-form></contact-form>
+    <contact-socials></contact-socials>
+  </div>
 </template> 
 
 <script>

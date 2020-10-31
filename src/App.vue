@@ -1,6 +1,13 @@
 <template>
   <app-navigation v-if="!$route.meta.hideHeader"></app-navigation>
-  <router-view></router-view>
+  
+    <router-view v-slot="slotProps">
+      <transition name="routes" mode="out-in">
+        <component :is="slotProps.Component"></component>
+      </transition>
+    </router-view>
+  
+  
   <app-footer></app-footer>
 </template>
 
@@ -49,6 +56,31 @@ html {
 
 .section-color {
   background-color: #f4f4f4;
+}
+
+/** TRANSITION */
+
+.routes-enter-active {
+  animation: routes 0.3s ease-in;
+}
+
+
+.routes-leave-active {
+  animation: routes 0.3s ease-in reverse;
+}
+
+
+
+@keyframes routes {
+  from {
+    opacity: 0;
+    transform: scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /** MEDIA QUERY PROJECTS */
