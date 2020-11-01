@@ -33,10 +33,11 @@ const router = createRouter({
         { path: '/achievements/quote-generator', component: QuoteGenerator, meta: { hideHeader: true } },
         { path: '/achievements/testing-todo-app', component: TodoTesting, meta: { hideHeader: true } },
         { path: '/achievements/express-food', component: ExpressFood, meta: { hideHeader: true } },
-        { path: '/contact-me', component: Contact, meta: { contactFooter: true, headerSection: true } }
+        { path: '/contact-me', component: Contact, meta: { contactFooter: true, headerSection: true } },
+        { path: '/:notFound(.*)', redirect: '/' }
     ],
     scrollBehavior(to, from, savedPosition) {
-        console.log(router.options.routes)
+        // console.log(router.options.routes)
         if (savedPosition) {
             return savedPosition
         }

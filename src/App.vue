@@ -25,11 +25,17 @@ export default {
     appNavigation,
     appFooter
   },
-  watch: {
+watch: {
     '$route' (to) {
-      console.log(to.path.split('/').length)
-      console.log(this.routesAnimation)
-      if (to.path.split('/').length > 2){
+      // console.log(this.$router.options.routes[1])
+      if (to.path == '/achievements/restaurant-reviews' || 
+          to.path == '/achievements/cat-facts' ||
+          to.path == '/achievements/ninja-fight' ||
+          to.path == '/achievements/film-festival' ||
+          to.path == '/achievements/dice-game' ||
+          to.path == '/achievements/quote-generator' ||
+          to.path == '/achievements/testing-todo-app' ||
+          to.path == '/achievements/express-food') {
         this.routesAnimation = 'project-routes'
       } else {
         this.routesAnimation = 'global-routes'
@@ -40,18 +46,18 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 /** GENERAL */
 * {
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
 }
 
 html {
-  font-family: 'Pacifico', cursive;
-    /* font-family: 'Lato', sans-serif; */
+    font-family: 'Lato', sans-serif;
     font-size: 20px;
     font-weight: 300;
     text-rendering: optimizeLegibility;
@@ -75,27 +81,13 @@ html {
   background-color: #f4f4f4;
 }
 
-/** TRANSITION */
+/** TRANSITION GLOBAL ROUTES*/
 
 .global-routes-enter-active {
   animation: global-routes 1s ease-in;
 }
 
 .global-routes-leave-from {
-  opacity :0;
-}
-/* .routes-leave-active {
-  transition: all 0;
-} */
-/* .routes-leave-to {
-  opacity :0;
-} */
-
-.project-routes-enter-active {
-  animation: project-routes 1s ease-in;
-}
-
-.project-routes-leave-from {
   opacity :0;
 }
 
@@ -110,6 +102,15 @@ html {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/** TRANSITION PROJECTS ROUTES*/
+.project-routes-enter-active {
+  animation: project-routes 1s ease-in;
+}
+
+.project-routes-leave-from {
+  opacity :0;
 }
 
 @keyframes project-routes {
