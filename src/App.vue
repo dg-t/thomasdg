@@ -2,7 +2,7 @@
   <app-navigation v-if="!$route.meta.hideHeader"></app-navigation>
   
     <router-view v-slot="slotProps">
-      <transition name="routes" mode="out-in">
+      <transition :name="routesAnimation" mode="out-in">
         <component :is="slotProps.Component"></component>
       </transition>
     </router-view>
@@ -16,15 +16,31 @@ import appNavigation from './components/Header/TheNavigation.vue'
 import appFooter from './components/Footer/TheFooter.vue'
 
 export default {
+  data() {
+    return {
+      routesAnimation: ''
+    }
+  },
   components: {
     appNavigation,
     appFooter
+  },
+  watch: {
+    '$route' (to) {
+      console.log(to.path.split('/').length)
+      console.log(this.routesAnimation)
+      if (to.path.split('/').length > 2){
+        this.routesAnimation = 'project-routes'
+      } else {
+        this.routesAnimation = 'global-routes'
+      }
+    }
   }
 }
 </script>
 
 <style>
-
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 /** GENERAL */
 * {
     margin: 0;
@@ -34,7 +50,8 @@ export default {
 }
 
 html {
-    font-family: 'Lato', sans-serif;
+  font-family: 'Pacifico', cursive;
+    /* font-family: 'Lato', sans-serif; */
     font-size: 20px;
     font-weight: 300;
     text-rendering: optimizeLegibility;
@@ -60,26 +77,51 @@ html {
 
 /** TRANSITION */
 
-.routes-enter-active {
-  animation: routes 0.3s ease-in;
+.global-routes-enter-active {
+  animation: global-routes 1s ease-in;
 }
 
+.global-routes-leave-from {
+  opacity :0;
+}
+/* .routes-leave-active {
+  transition: all 0;
+} */
+/* .routes-leave-to {
+  opacity :0;
+} */
 
-.routes-leave-active {
-  animation: routes 0.3s ease-in reverse;
+.project-routes-enter-active {
+  animation: project-routes 1s ease-in;
 }
 
+.project-routes-leave-from {
+  opacity :0;
+}
 
-
-@keyframes routes {
+@keyframes global-routes {
   from {
     opacity: 0;
-    transform: scale(0.99);
+    /* transform: scale(0.99); */
+    transform: translateY(-30px);
   }
 
   to {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0);
+  }
+}
+
+@keyframes project-routes {
+  from {
+    opacity: 0;
+    /* transform: scale(0.99); */
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 

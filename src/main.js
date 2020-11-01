@@ -36,7 +36,7 @@ const router = createRouter({
         { path: '/contact-me', component: Contact, meta: { contactFooter: true, headerSection: true } }
     ],
     scrollBehavior(to, from, savedPosition) {
-        console.log(to, from, savedPosition)
+        console.log(router.options.routes)
         if (savedPosition) {
             return savedPosition
         }

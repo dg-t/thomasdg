@@ -1,35 +1,36 @@
 <template>
+  <div>
+    <div class="row container-fluid projects">
 
-  <div class="row container-fluid projects">
-
-      <!-- Project description -->
-      <div class="col-lg-5 project_description">
-          <h3>{{ title }}</h3>
-          <p class="container-fluid" v-html="description"></p>
-          <div class="container__button_links">
-              <router-link :to="'/achievements/'+id" class="button_links">Description</router-link>
-              <a :href="github_link" class="button_links" target="_blank">Source Code</a>
-              <a :href="webpage_link" class="button_links" target="_blank" v-if="webpage_link">Webpage</a>
-          </div>
-      </div>
-      
-      <!-- Image -->
-      <div class="col-lg-7 image_container" v-if="id !='restaurant-reviews'">
-        <p class="ghost_text" v-if="show">{{title}}</p>
-        <div :class="{image_scroll: id == 'testing-todo-app' || id == 'film-festival' }">
-          <img :src="image" :alt="title" class="img-fluid img_project" @mouseover="show = !show" @mouseleave="show = !show" />
+        <!-- Project description -->
+        <div class="col-lg-5 project_description">
+            <h3>{{ title }}</h3>
+            <p class="container-fluid" v-html="description"></p>
+            <div class="container__button_links">
+                <router-link :to="'/achievements/'+id" class="button_links">Description</router-link>
+                <a :href="github_link" class="button_links" target="_blank">Source Code</a>
+                <a :href="webpage_link" class="button_links" target="_blank" v-if="webpage_link">Webpage</a>
+            </div>
         </div>
-      </div>
-
-      <!-- Restaurant Review project image -->
-      <div class="col-lg-7 flip-box" v-if="id=='restaurant-reviews'">
-        <div class="flip-box-inner">
+        
+        <!-- Image -->
+        <div class="col-lg-7 image_container" v-if="id !='restaurant-reviews'">
           <p class="ghost_text" v-if="show">{{title}}</p>
-            <img :src="image" class="flip-box-front img-fluid image_box" :alt="title">
-            <img :src="image_two" class="flip-box-back img-fluid image_box" :alt="title">
+          <div :class="{image_scroll: id == 'testing-todo-app' || id == 'film-festival' }">
+            <img :src="image" :alt="title" class="img-fluid img_project" @mouseover="show = !show" @mouseleave="show = !show" />
+          </div>
         </div>
-      </div>
 
+        <!-- Restaurant Review project image -->
+        <div class="col-lg-7 flip-box" v-if="id=='restaurant-reviews'">
+          <div class="flip-box-inner">
+            <p class="ghost_text" v-if="show">{{title}}</p>
+              <img :src="image" class="flip-box-front img-fluid image_box" :alt="title">
+              <img :src="image_two" class="flip-box-back img-fluid image_box" :alt="title">
+          </div>
+        </div>
+
+    </div>
   </div>
   
 </template>
