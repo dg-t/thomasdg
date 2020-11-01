@@ -29,13 +29,15 @@
       <a class="project_btn" @click="feedback=!feedback">See Feedback</a>
     </div>
 
-    <section class="separator section-color" v-if="feedback">
-      <div class="container-fluid feedback_container"> 
-        <h4 class="py-3">Instructor feedback</h4>
-        <p>Thomas has done brilliantly well with his project. He has structured his JavaScript function correctly and has an apt logic to form the quotes. The styling on the app is pleasing. He has met all the rubric criterias for this project.</p>
-        <p>Good work mentor and student.</p>
-      </div>
-    </section>
+    <transition name="feedback">
+      <section class="separator section-color" v-if="feedback">
+        <div class="container-fluid feedback_container"> 
+          <h4 class="py-3">Instructor feedback</h4>
+          <p>Thomas has done brilliantly well with his project. He has structured his JavaScript function correctly and has an apt logic to form the quotes. The styling on the app is pleasing. He has met all the rubric criterias for this project.</p>
+          <p>Good work mentor and student.</p>
+        </div>
+      </section>
+    </transition>
 
     <div class="project_btn_container separator">
       <router-link :to="'/achievements/'" class="project_btn">Back to projects</router-link>

@@ -45,33 +45,35 @@
       <a class="project_btn" @click="feedback=!feedback">See Feedback</a>
     </div>
 
-    <section class="separator section-color" v-if="feedback">
-      <div class="container-fluid feedback_container">
-        <h4 class="py-3">Instructor feedback</h4>
-        <p><b>1. Provide an assessment of the student's work and, if the project has to be reworked, write a few lines about the criteria the project does not currently meet:</b></p>
-        <p>Project work satisfies all the requirements listed in the project brief.</p>
-        <p><b>2. Assessment of the project deliverables against the project criteria:</b></p>
-        <p>Bug fixes</p>
-        <ul>
-          <li>The typo bug has been fixed and therefore restored the ability to add Todos.</li>
-          <li>Potential ID conflict bug was also fixed.</li>
-          <li>A third bug was found with the toggle-all functionality, and this bug has been fixed as well.</li>
-        </ul>
-        <p>Test cases</p>
-        <ul>
-          <li>All test cases that were marked to be done have been completed. All of the test cases are passing.</li>
-        </ul>
-        <p>Audit report and Technical documentation</p>
-        <ul>
-          <li>The technical documentation describes all the aspect of the project correctly. The language used is professional, clean and ambiguous.</li>
-          <li>The audit report describes the performance metrics of both the competitor's app and the project's app in great detail. The comparison both these app and also has proposals on the improvements that can be made.</li>
-        </ul>
-        <p>Overall, clean coding practices have been applied and all documentation uses clear and professional language.</p>
-        <p><b>3. Assessment of the student’s delivery of the presentation and whether they meet the presentation guidelines:</b></p>
-        <p>The presentation of this project was very detailed and well within the prescribed time limit.</p>
-        <p>Good work overall, project approved!</p>
-      </div>
-    </section>
+    <transition name="feedback">
+      <section class="separator section-color" v-if="feedback">
+        <div class="container-fluid feedback_container">
+          <h4 class="py-3">Instructor feedback</h4>
+          <p><b>1. Provide an assessment of the student's work and, if the project has to be reworked, write a few lines about the criteria the project does not currently meet:</b></p>
+          <p>Project work satisfies all the requirements listed in the project brief.</p>
+          <p><b>2. Assessment of the project deliverables against the project criteria:</b></p>
+          <p>Bug fixes</p>
+          <ul>
+            <li>The typo bug has been fixed and therefore restored the ability to add Todos.</li>
+            <li>Potential ID conflict bug was also fixed.</li>
+            <li>A third bug was found with the toggle-all functionality, and this bug has been fixed as well.</li>
+          </ul>
+          <p>Test cases</p>
+          <ul>
+            <li>All test cases that were marked to be done have been completed. All of the test cases are passing.</li>
+          </ul>
+          <p>Audit report and Technical documentation</p>
+          <ul>
+            <li>The technical documentation describes all the aspect of the project correctly. The language used is professional, clean and ambiguous.</li>
+            <li>The audit report describes the performance metrics of both the competitor's app and the project's app in great detail. The comparison both these app and also has proposals on the improvements that can be made.</li>
+          </ul>
+          <p>Overall, clean coding practices have been applied and all documentation uses clear and professional language.</p>
+          <p><b>3. Assessment of the student’s delivery of the presentation and whether they meet the presentation guidelines:</b></p>
+          <p>The presentation of this project was very detailed and well within the prescribed time limit.</p>
+          <p>Good work overall, project approved!</p>
+        </div>
+      </section>
+    </transition>
 
     <div class="project_btn_container separator">
       <router-link :to="'/achievements/'" class="project_btn">Back to projects</router-link>

@@ -41,21 +41,23 @@
         <a class="project_btn" @click="feedback=!feedback">See Feedback</a>
       </div>
 
-      <section class="separator section-color" v-if="feedback">
-        <div class="container-fluid feedback_container">
-          <h4 class="py-3">Instructor feedback</h4>
-          <p><b>Summary:</b></p>
-          <p>Thomas has done a fantastic job with his website! <br />
-            I've left my feedback about it below.</p>
+      <transition name="feedback">
+        <section class="separator section-color" v-if="feedback">
+          <div class="container-fluid feedback_container">
+            <h4 class="py-3">Instructor feedback</h4>
+            <p><b>Summary:</b></p>
+            <p>Thomas has done a fantastic job with his website! <br />
+              I've left my feedback about it below.</p>
 
-          <p><b>Things to work on:</b></p>
-          <p>The theme/design chosen for the website could have been more apt, but since this is trivial, it is okay.</p>
-          <p><b>Overall impression:</b></p>
-          <p>Thomas has written a very well-detailed project brief.<br />
-            He has also built a great website and it meets all of Jennifer's requirements!<br />
-            All the best with your future projects, Thomas! :)</p>
-        </div>
-      </section>
+            <p><b>Things to work on:</b></p>
+            <p>The theme/design chosen for the website could have been more apt, but since this is trivial, it is okay.</p>
+            <p><b>Overall impression:</b></p>
+            <p>Thomas has written a very well-detailed project brief.<br />
+              He has also built a great website and it meets all of Jennifer's requirements!<br />
+              All the best with your future projects, Thomas! :)</p>
+          </div>
+        </section>
+      </transition>
 
       <div class="project_btn_container separator">
         <router-link :to="'/achievements/'" class="project_btn">Back to projects</router-link>

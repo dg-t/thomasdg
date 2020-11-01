@@ -206,6 +206,16 @@ export default {
   transition: all 0.5s ease;
 }
 
+/** TRANSITION FEEDBACK */
+
+.feedback-enter-active {
+  animation: global-routes 0.5s ease-out;
+}
+
+.feedback-leave-active {
+  animation: global-routes 0.5s ease-in reverse;
+}
+
 /** MEDIA QUERY PROJECTS */
 
 @media only screen and (max-width: 767px)  {

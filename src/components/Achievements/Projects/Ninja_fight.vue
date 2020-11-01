@@ -44,24 +44,26 @@
       <a class="project_btn" @click="feedback=!feedback">See Feedback</a>
     </div>
 
-    <section class="separator section-color" v-if="feedback">
-      <div class="container-fluid feedback_container">
-        <h3 class="py-3">Instructor Feedback</h3>
-        <p><b>    1. Provide an assessment of the student's work and, if the project has to be reworked, write a few lines about the criteria the project does not currently meet:</b></p>
-        <p>Thomas has completed a great project which covers all the deliverables of the game and makes the Game look rich in UI and functionality. He has added more details in the game for the help of players explaining weapon damage etc.  </p>
-        <p>Also his code is well documented and well structured and Thomas has used prototypes to define functions for objects. It was strange for me to know that he was new to Javascript. Thomas could also answer my questions and exhibited good knowledge of Javascript.</p>
-        <p><b>2. Assessment of the project deliverables against the project criteria:</b></p>
-        <p>Thomas has met the project criteria for the deliverables. </p>
-        <p><b>3. Assessment of the student’s delivery of the presentation and whether they meet the presentation guidelines:</b></p>
-        <p>Presentation was well detailed and illustrated. Thomas had walked me through the game and then through the code in detail.  </p>
-        <p><b>4. Assessment of the student's newly acquired skills:</b></p>
-        <p>Javascript coding skills. Game development thinking, and structuring code in a readable and maintainable way.</p>
-        <p><b>5. Explain at least one core strength of the work the student has done so far:</b></p>
-        <p>Thomas has picked up core concepts of Javascript quickly, so I suggest learning quickly is a core strength Thomas possesses.</p>
-        <p><b>6. Explain at least one area in which the student’s work needs to improve:</b></p>
-        <p>Even though Thomas had structured code in a good way for a beginner, but there's always room to structure code in a better way by having multiple files with logic abstracted to each rather than having less files have more code.</p>  
-      </div>
-    </section>
+    <transition name="feedback">
+      <section class="separator section-color" v-if="feedback">
+        <div class="container-fluid feedback_container">
+          <h3 class="py-3">Instructor Feedback</h3>
+          <p><b>    1. Provide an assessment of the student's work and, if the project has to be reworked, write a few lines about the criteria the project does not currently meet:</b></p>
+          <p>Thomas has completed a great project which covers all the deliverables of the game and makes the Game look rich in UI and functionality. He has added more details in the game for the help of players explaining weapon damage etc.  </p>
+          <p>Also his code is well documented and well structured and Thomas has used prototypes to define functions for objects. It was strange for me to know that he was new to Javascript. Thomas could also answer my questions and exhibited good knowledge of Javascript.</p>
+          <p><b>2. Assessment of the project deliverables against the project criteria:</b></p>
+          <p>Thomas has met the project criteria for the deliverables. </p>
+          <p><b>3. Assessment of the student’s delivery of the presentation and whether they meet the presentation guidelines:</b></p>
+          <p>Presentation was well detailed and illustrated. Thomas had walked me through the game and then through the code in detail.  </p>
+          <p><b>4. Assessment of the student's newly acquired skills:</b></p>
+          <p>Javascript coding skills. Game development thinking, and structuring code in a readable and maintainable way.</p>
+          <p><b>5. Explain at least one core strength of the work the student has done so far:</b></p>
+          <p>Thomas has picked up core concepts of Javascript quickly, so I suggest learning quickly is a core strength Thomas possesses.</p>
+          <p><b>6. Explain at least one area in which the student’s work needs to improve:</b></p>
+          <p>Even though Thomas had structured code in a good way for a beginner, but there's always room to structure code in a better way by having multiple files with logic abstracted to each rather than having less files have more code.</p>  
+        </div>
+      </section>
+    </transition>
 
     <div class="project_btn_container separator">
       <router-link :to="'/achievements/'" class="project_btn">Back to projects</router-link>
