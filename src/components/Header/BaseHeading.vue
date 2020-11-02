@@ -20,7 +20,7 @@ export default {
 /** HEADING */
 
 .heading {
-  background-color: #f4f4f4;
+  background-color: #d2d2d2;
   letter-spacing: 5px;
   word-spacing: 2px;
 }
@@ -32,6 +32,8 @@ export default {
   font-weight: 320;
   padding: 20px;
   margin-top:20px;
+  text-shadow: 2px 2px #ededed;
+  box-shadow: 1px 2px 2px  #888888;
 }
 
 .custom-heading:before {
