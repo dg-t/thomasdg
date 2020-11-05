@@ -138,6 +138,7 @@ export default {
 .container__porject_description {
   padding: 80px;
   margin: auto;
+  box-shadow: 1px 2px 2px  #000;
 }
   
 /** CONTAINER SECTION FEEDBACK */

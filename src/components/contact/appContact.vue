@@ -34,6 +34,13 @@ header {
   word-spacing: 2px;
   transition: all 0.1s ease-in;
   overflow-x: hidden;
+  padding-bottom:2px;
+}
+
+@media only screen and (max-width: 767px)  {
+  header {
+    padding-bottom:0;
+  }
 }
 
 @media only screen and (max-width: 575px)  {

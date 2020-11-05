@@ -20,19 +20,18 @@ export default {
 /** HEADING */
 
 .heading {
-  background-color: #d2d2d2;
+  background-color: #f4f4f4;
   letter-spacing: 5px;
   word-spacing: 2px;
 }
 
-
-
 .custom-heading {
+  z-index:999;
   font-size: 180%;
   font-weight: 320;
   padding: 20px;
   margin-top:20px;
-  text-shadow: 2px 2px #ededed;
+  text-shadow: 2px 2px #fefefe;
   box-shadow: 1px 2px 2px  #888888;
 }
 
@@ -68,7 +67,6 @@ export default {
 
   .heading {
     position:relative;
-    background-color: #e3e3e3;
     letter-spacing: 3px;
     word-spacing: 1px;
   }
@@ -78,6 +76,8 @@ export default {
     font-size: 150%;
     padding: 8% 3% !important; 
     font-style: italic;
+    box-shadow: none;
+    text-shadow: 1px 1px #fefefe;
   }
 
   .custom-heading:before {

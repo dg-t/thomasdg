@@ -141,14 +141,14 @@ export default {
 /** ICONS */
 
 .icon_container {
-    /* display: flex;
-    justify-content: space-around;
-    align-items: center; */
    overflow: hidden;
-    text-align: center;
-    padding: 50px;
-    background-color: #f4f4f4;
-    min-height: 300px;
+  text-align: center;
+  padding: 50px;
+  /* background-color: #f4f4f4; */
+  background-color: #f7f7f7;
+  min-height: 300px;
+  margin-top:2px;
+  border-bottom: 1px solid #e4e4e4;
 }
 
 img {
@@ -193,6 +193,9 @@ img:hover {
     height:160px;
     margin: 20px 0;
     width:160px;
+  }
+  .icon_container {
+    margin-top:0;
   }
 }
 

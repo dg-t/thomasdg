@@ -1,5 +1,5 @@
 <template>
-  <section class="container-fluid mt-0">
+  <section class="container-fluid">
     <div class="form-heading">
       <div class="icon-contact">
         <h4>Send me an Email</h4>
