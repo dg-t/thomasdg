@@ -1,10 +1,10 @@
 <template>
   <div>
-    <header>
+    <!-- <header>
       <base-heading>
         Contact Me
       </base-heading>
-    </header>
+    </header> -->
 
     <contact-form></contact-form>
     <contact-socials></contact-socials>
@@ -26,8 +26,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-/** TODO REMOVE MARGIN TOP FOR MOBILE */
-header {
+/* header {
   background-color: #f4f4f4;
   margin-top:90px;
   letter-spacing: 5px;
@@ -48,7 +47,7 @@ header {
     margin-top:0;
     transition: all 0.1s ease-in;
   }
-}
+} */
 
 </style>
 

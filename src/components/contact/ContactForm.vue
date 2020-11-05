@@ -2,7 +2,7 @@
   <section class="container-fluid">
     <div class="form-heading">
       <div class="icon-contact">
-        <h4>Send me an Email</h4>
+        <h4>LET'S TALK!</h4>
         <i class="fa fa-envelope ml-4 fa_custom" aria-hidden="true"></i>
       </div>
     </div>
@@ -143,6 +143,26 @@ section {
   overflow-x: hidden;
 }
 
+
+
+.icon-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:90px;
+    padding: 10px 0;
+    letter-spacing: 5px;
+  word-spacing: 2px;
+  overflow-x: hidden;
+}
+
+@media only screen and (max-width: 575px)  {
+  .icon-contact {
+    margin-top:0;
+  }
+}
+
 /** FORM */
 
 form {
@@ -241,18 +261,19 @@ button:hover {
 
 }
 
-.icon-contact {
+/* .icon-contact {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 10px 0;
-}
+} */
 
 .fa_custom {
     font-size: 1.8em;
     width: 1.6em;
-    text-align: center;
+    text-align:center;
+    padding-left:4px;
     line-height: 1.6em;
     background: #fff;
     color: #007bb5;
