@@ -63,8 +63,6 @@ export default {
 
 <style scoped>
 
-/** TODO - Delete border bottom for Mobile device */
-
 /** NAV */
 
 .customized_nav {
@@ -155,6 +153,7 @@ button:focus {
     transition: opacity 0.4s;
 }
 
+/** MEDIA QUERY */
 @media only screen and (max-width: 575px)  {
 
   /** NAV */
@@ -168,17 +167,18 @@ button:focus {
   ul {
     padding: 20px 0;
   }
+
   a {
     transition: border-bottom 0.3s;
     opacity:0.8;
     letter-spacing: 1px;
   }
+  
   a:hover,
   a.active {
     padding-bottom:5px;
     border-bottom: 1px solid rgb(66, 156, 252);
   }
-
 }
 
 </style>

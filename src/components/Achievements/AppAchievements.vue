@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <achievements-header></achievements-header>
 
     <section style="overflow: hidden" >
@@ -15,6 +16,7 @@
         :webpage_link="project.webpage_link"
         > </app-achievements>
     </section>
+    
   </div>
 </template>
 

@@ -76,7 +76,7 @@
       <div class="row section-color container-fluid mx-0 py-3 py-sm-4 py-md-5">
 
         <div class="col-lg-5 image_container container">
-          <img src="../../assets/about/dream-min.jpg" class="img-fluid img_project" alt="">
+          <img src="../../assets/about/dream-min.jpg" class="img-fluid img_project" alt="dream">
         </div>
 
         <div class="container-fluid  col-lg-6">
@@ -122,7 +122,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 /** GENERAL TEXT */

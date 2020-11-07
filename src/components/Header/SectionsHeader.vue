@@ -2,15 +2,13 @@
 
   <section class="container-fluid mx-0 px-0" v-if="$route.meta.achievementsHeader">
     <header class="container-fluid header-achievements"></header>
-
-      <base-heading>
-        Achievements
-      </base-heading>    
+    <base-heading>
+      Achievements
+    </base-heading>    
   </section>
 
-   <section class="container-fluid mx-0 px-0" v-if="$route.meta.aboutHeader">
+  <section class="container-fluid mx-0 px-0" v-if="$route.meta.aboutHeader">
     <header class="container-fluid header-about" ></header>
-
     <base-heading>
         ABOUT ME  
     </base-heading>
@@ -45,6 +43,8 @@ export default {
   background-attachment: fixed;
   height: 60vh;
 }
+
+/** MEDIA QUERY */
 
 @media only screen and (max-width: 1024px)  {
   .header-about {

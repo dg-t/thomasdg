@@ -5,21 +5,12 @@
     <base-heading>Some of the technologies I use...</base-heading>
     
     <div class="row icon_container">
-
-      <!-- <div class="col-sm-6 col-md-4 mb-5 animate__animated isVisible"
-            :class="[{animate__fadeInTopLeft: scrollWindow > 1700 && innerWidth > 767}, {visible: scrollWindow > 1700}]">
-            <img src="../../../assets/icons/skills_techs/html_icon.svg" class="" alt="js icon">
-        </div> -->
       <transition :enter-active-class="innerWidth <= 767 ? 'animate__fadeIn': 'animate__fadeInTopLeft'" class="animate__animated"
                   :leave-active-class="innerWidth <= 767 ? 'animate__fadeOut': 'animate__fadeOutTopLeft'" mode="out-in">
         <div class="col-6 col-md-4 mb-md-5" v-if="showFirst">
             <img src="../../../assets/icons/skills_techs/html_icon.svg" alt="html icon">
         </div>
       </transition>
-      <!-- :class="{image_scroll: id == 'testing-todo-app' || id == 'film-festival' }"
-      :class="index % 2 == 0  ? '' : 'section-color'" 
-      :enter-active-class="innerWidth > 575 && innerWidth < 767 ? animate__flip: animate__fadeInTopLeft"
-      :enter-active-class="[{animate__flip: innerWidth > 575 && innerWidth < 767}, {animate__fadeInTopLeft: innerWidth < 575 || innerWidth > 767}]"-->
         <transition :enter-active-class="innerWidth <= 767 ? 'animate__fadeIn': 'animate__flip'" class="animate__animated"
                     leave-active-class="animate__fadeOut"  mode="out-in">
           <div class="col-6 col-md-4 mb-md-5" v-if="showFirst">
@@ -53,10 +44,7 @@
             <img src="../../../assets/icons/skills_techs/python_icon.svg" alt="python icon">
           </div>
         </transition>
-        
     </div>
-
-    <!-- <h2 class="custom-heading separator m-0">and more...</h2> -->
 
   </section>
 
@@ -103,32 +91,10 @@ export default {
       } else {
         this.showMobile=false;
       }
-    },
-    // scrollSecond(){
-    //   this.scrollWindow = window.scrollY;
-    //   this.innerWidth = window.innerWidth;
-    //   if ((this.scrollWindow > 1850 && this.innerWidth > 767) ||
-    //       (this.scrollWindow > 1150 && this.innerWidth <= 767)) {
-    //       this.showSecond=true;
-    //       }
-    //   else {
-    //     this.showSecond=false;
-    //   }
-    // },
-    // mobile() {
-    //   this.scrollWindow = window.scrollY;
-    //   this.innerWidth = window.innerWidth;
-    //   if (this.scrollWindow > 1000 && this.innerWidth <= 767) {
-    //     this.showMobile=true;
-    //   } else {
-    //     this.showMobile=false;
-    //   }
-    // }
+    }
   },
   mounted() {
     window.addEventListener('scroll', this.scrollFirst)
-    // window.addEventListener('scroll', this.scrollSecond)
-    // window.addEventListener('scroll', this.mobile)
   }
 }
 
@@ -136,15 +102,12 @@ export default {
 
 <style scoped>
 
-/** TODO IMPROVE ANIMATION WITH CUSTOM DIRECTIVE */
-
 /** ICONS */
 
 .icon_container {
    overflow: hidden;
   text-align: center;
   padding: 50px;
-  /* background-color: #f4f4f4; */
   background-color: #f7f7f7;
   min-height: 300px;
   margin-top:2px;

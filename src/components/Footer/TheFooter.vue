@@ -40,13 +40,10 @@ footer {
     height:auto;
 }
 
-
 .icon-container {
     display:flex;
     justify-content: center;
-
 }
-
 
 .fa_custom {
     font-size: 1.8em;
@@ -62,5 +59,4 @@ i:hover {
     background: #007bb5;
     color: #fff;
 }
-/* Complete home page layout and footer */
 </style>
