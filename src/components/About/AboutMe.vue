@@ -76,7 +76,7 @@
       <div class="row section-color container-fluid mx-0 py-3 py-sm-4 py-md-5">
 
         <div class="col-lg-5 image_container container">
-          <img src="../../assets/about/dream.jpg" class="img-fluid img_project" alt="">
+          <img src="../../assets/about/dream-min.jpg" class="img-fluid img_project" alt="">
         </div>
 
         <div class="container-fluid  col-lg-6">

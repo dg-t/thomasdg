@@ -70,7 +70,7 @@
       </div>
 
       <div class="col-md-5 postman-image">
-          <img src="../../assets/contact/postman.jpg" alt="Postman">
+          <img src="../../assets/contact/postman-min.jpg" alt="Postman">
       </div>
 
     </div>
