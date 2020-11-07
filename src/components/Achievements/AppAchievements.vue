@@ -138,7 +138,6 @@ export default {
 .container__porject_description {
   padding: 80px;
   margin: auto;
-  box-shadow: 1px 2px 2px  #000;
 }
   
 /** CONTAINER SECTION FEEDBACK */
@@ -197,7 +196,6 @@ export default {
   color: #07c;
   border: 1px solid #0af;
   border-radius: 5px;
-  box-shadow: 1px 2px 2px  #888888;
   text-decoration: none !important;
 }
 
