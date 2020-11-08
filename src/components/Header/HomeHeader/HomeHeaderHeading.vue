@@ -1,7 +1,7 @@
 <template>
     <div class="presentation text-center">
       <div class="container">
-        <h1 class="text-white">Hello, I am Thomas<br /> A web Developer!</h1>
+        <h1>Hello, I am Thomas<br /> A web Developer!</h1>
       </div>
     </div>
 </template>
@@ -28,11 +28,20 @@ export default {
 }
 
 h1 {
-  font-weight: 150;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px #fff;
   border-bottom: 1px solid white;
+  color:white;
   padding-bottom: 30px;
   letter-spacing: 3px;
   word-spacing: 2px;
+}
+
+@media only screen and (max-width: 1024px)  {
+  h1 {
+    font-weight: 300;
+    text-shadow: none;
+  }
 }
 
 </style>
