@@ -14,8 +14,10 @@
               aria-label="Toggle navigation"
               @click="toggleNavBarBtn"
               >
-              <i class="fas fa-bars icon__toggleBtn" v-if="!show"></i>
-              <i class="fas fa-times icon__toggleBtn" v-if="show"></i>
+              <transition class="animate__animated" enter-active-class="animate__flipInY" leave-active-class="animate__flipOutY" mode="out-in">
+                <i class="fas fa-bars icon__toggleBtn" v-if="!show"></i>
+                <i class="fas fa-times icon__toggleBtn" v-else></i>
+              </transition>
           </button>
 
           <!-- collapse navBar for smaller screens -->
@@ -66,14 +68,14 @@ export default {
 /** NAV */
 
 .customized_nav {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #fff;
   padding-bottom: 25px;
   padding-top: 25px;
   transition: all 0.6s;
 }
 
 .updateColor {
-  background-color: rgb(80, 80, 80);
+  background-color: #505050;
   padding-bottom: 10px;
   padding-top: 10px;
   transition: all 0.3s ease-out;
@@ -93,7 +95,7 @@ li {
 }
 
 a {
-  font-weight: 200;
+  font-weight: 300;
   font-size: 80%;
   cursor: pointer;
   text-decoration: none;
@@ -110,16 +112,16 @@ a.active {
   border-bottom: 2px solid rgb(66, 156, 252);
 }
 
-a.router-link-active,
-li {
-  opacity: 1;
-  font-weight: 245;
-}
+  a.router-link-active {
+    opacity: 1;
+    font-weight: 400;
+  }
 
 /** TOGGLE BUTTON */
 
 button {
   border-radius: 15px;
+  width:48px;
 }
 
 button:hover,
@@ -131,15 +133,13 @@ button:focus {
 .btnClose {
   position: absolute; 
   right:25px; 
-  top: 60px;
-  transition: all 1s ease;
+  top: 25px;
 }
 
 .btnOpen {
   position: absolute; 
   right:25px; 
   top: 25px;
-  transition: all 1s ease;
 }
 
 .icon__toggleBtn {
@@ -168,10 +168,12 @@ button:focus {
     padding: 20px 0;
   }
 
-  a {
-    transition: border-bottom 0.3s;
-    opacity:0.8;
-    letter-spacing: 1px;
+  a {    
+    opacity:0.9;
+  }
+
+  a.router-link-active {
+    margin-left: 20px;
   }
   
   a:hover,
