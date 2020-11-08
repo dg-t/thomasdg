@@ -106,6 +106,7 @@ h3 {
   background-color: transparent;
   padding: 25px 70px 0 50px;
   height: 400px;
+  margin-top: 3%;
 }
 
 .flip-box-inner {
@@ -216,6 +217,7 @@ a:hover {
   /** IMAGE FLIP */
   .flip-box {
     height: 350px;
+    margin-top: 5%;
   }
 
   /** IMAGE SCROLL */
