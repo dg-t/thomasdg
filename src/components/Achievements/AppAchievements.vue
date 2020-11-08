@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <achievements-header></achievements-header>
 
     <section style="overflow: hidden" >
@@ -15,6 +16,7 @@
         :webpage_link="project.webpage_link"
         > </app-achievements>
     </section>
+    
   </div>
 </template>
 
@@ -39,8 +41,8 @@ export default {
                           <li>Users can search for restaurants close to them, review restaurants,
                           add new restaurants to the map, and access the Google street view.</li> 
                           <li>All information is in real-time.</li></ul></p>`,
-          image: require("../../assets/projects/restaurant_review_one.png"),
-          image_two: require("../../assets/projects/restaurant_review_two.png"),
+          image: require("../../assets/projects/restaurant_review_one-min.png"),
+          image_two: require("../../assets/projects/restaurant_review_two-min.png"),
           github_link: "https://github.com/dg-t/restaurantReview",
           webpage_link: "https://dg-t.github.io/restaurantReview/"
         },
@@ -53,7 +55,7 @@ export default {
                           <li>Add new unit tests with Jasmine Framework.</li>
                           <li>Analyze website performance and write an audit performance document.</li>
                           <li>Write technical documentation for the website.</li></ul></p>`,
-          image: require("../../assets/projects/testing.png"),
+          image: require("../../assets/projects/testing-min.png"),
           github_link: "https://github.com/dg-t/todosAppTesting"
         },
         {
@@ -61,7 +63,7 @@ export default {
           title: "Cat Facts",
           description: `<p>For this project, I created a single page application (SPA) that uses an external API, cat-facts, 
                           to retrieve information about cats using the latest JavaScript features.</p>`,
-          image: require("../../assets/projects/cat_facts.png"),
+          image: require("../../assets/projects/cat_facts-min.png"),
           github_link: "https://github.com/dg-t/catFacts",
           webpage_link: "https://dg-t.github.io/catFacts/"
         },
@@ -72,7 +74,7 @@ export default {
                           <ul class="pl-3"><li>Generate a random game-board with obstacles, players and weapons.</li>
                           <li>Players can move one to three boxes, and if they pass over a weapon they leave their current weapon on-site and replace it with the new one.</li>
                           <li>If players cross over adjacent squares, a battle begins.</li></ul></p>`,
-          image: require("../../assets/projects/ninja_game.png"),
+          image: require("../../assets/projects/ninja_game-min.png"),
           github_link: "https://github.com/dg-t/ninjaGamejs",
           webpage_link: "https://dg-t.github.io/ninjaGamejs/"
         },
@@ -82,7 +84,7 @@ export default {
           description: `For this project, I created a static site from scratch for a film festival event.
                           The site is aesthetically pleasing and aims to all types of audience.<br />
                           I also prepared a project brief to communicate with the client.`,
-          image: require("../../assets/projects/film_festival.png"),
+          image: require("../../assets/projects/film_festival-min.png"),
           github_link: "https://github.com/dg-t/Film-Festival-Website",
           webpage_link: "https://dg-t.github.io/Film-Festival-Website/"
         },
@@ -91,7 +93,7 @@ export default {
           title: "Dice Game",
           description: `For this project, I designed a game with JavaScript easy to use.
                           It is a turn-based game with specific rules and customizable score to reach.`,
-          image: require("../../assets/projects/dice_game.png"),
+          image: require("../../assets/projects/dice_game-min.png"),
           github_link: "https://github.com/dg-t/diceGame",
           webpage_link: "https://dg-t.github.io/diceGame/"
         },
@@ -100,7 +102,7 @@ export default {
           title: "Quote Generator",
           description: `For this project, I created a random quote generator with JavaScript. 
                           Quotes are randomly printed combining three different sentence fragments.`,
-          image: require("../../assets/projects/quote_generator.png"),
+          image: require("../../assets/projects/quote_generator-min.png"),
           github_link: "https://github.com/dg-t/QuoteGenerator",
           webpage_link: "https://dg-t.github.io/QuoteGenerator/"
         },
@@ -110,7 +112,7 @@ export default {
           description: `For this project, I map out a technical solution for the food delivery site ExpressFood.<br />
                           I designed a UML (Unified Modeling Language) diagram to model the technical architecture of the database, 
                           and I created a MySQL database with made-up information. `,
-          image: require("../../assets/projects/expressFood_uml.png"),
+          image: require("../../assets/projects/expressFood_uml-min.png"),
           github_link: "https://github.com/dg-t/ExpressFood"
         }
         ]
@@ -154,6 +156,18 @@ export default {
 }
 
 /** LINKS */
+a.link_customized {
+  padding: 5px 10px;
+  color: #07c;
+  cursor: pointer;
+  transition: 0.6s;
+  text-decoration: none;
+}
+
+a.link_customized:hover {
+  color: #0af;
+  transition: all 0.5s ease;
+}
 
 .link_customized {
   display: inline-block;
@@ -169,6 +183,7 @@ export default {
   transform-origin:bottom right;
   transform-origin:100% 50%;
 }
+
 .link_customized:hover:after { 
   transform: scaleX(1);
   transform-origin:bottom left;

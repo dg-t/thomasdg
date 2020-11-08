@@ -70,7 +70,7 @@
       </div>
 
       <div class="col-md-5 postman-image">
-          <img src="../../assets/contact/postman.jpg" alt="Postman">
+          <img src="../../assets/contact/postman-min.jpg" alt="Postman">
       </div>
 
     </div>
@@ -143,8 +143,6 @@ section {
   overflow-x: hidden;
 }
 
-
-
 .icon-contact {
     display: flex;
     flex-direction: column;
@@ -155,12 +153,6 @@ section {
     letter-spacing: 5px;
   word-spacing: 2px;
   overflow-x: hidden;
-}
-
-@media only screen and (max-width: 575px)  {
-  .icon-contact {
-    margin-top:0;
-  }
 }
 
 /** FORM */
@@ -261,14 +253,6 @@ button:hover {
 
 }
 
-/* .icon-contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 0;
-} */
-
 .fa_custom {
     font-size: 1.8em;
     width: 1.6em;
@@ -339,6 +323,12 @@ img {
 @media only screen and (max-width: 767px) {
   .postman-image {
     display:none;
+  }
+}
+
+@media only screen and (max-width: 575px)  {
+  .icon-contact {
+    margin-top:0;
   }
 }
 

@@ -87,6 +87,8 @@ section {
     letter-spacing: 1px;
 }
 
+/** MEDIA QUERY */
+
 @media only screen and (max-width: 500px) {
 
     /** CONTAINER ICONS */

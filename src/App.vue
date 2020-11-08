@@ -1,4 +1,5 @@
 <template>
+
   <app-navigation v-if="!$route.meta.hideHeader"></app-navigation>
   
     <router-view v-slot="slotProps">
@@ -7,8 +8,8 @@
       </transition>
     </router-view>
   
-  
   <app-footer></app-footer>
+
 </template>
 
 <script>
@@ -48,6 +49,7 @@ watch: {
 <style>
 
 /** GENERAL */
+
 * {
     margin: 0;
     padding: 0;
@@ -91,19 +93,6 @@ html {
   opacity :0;
 }
 
-@keyframes global-routes {
-  from {
-    opacity: 0;
-    /* transform: scale(0.99); */
-    transform: translateY(-30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /** TRANSITION PROJECTS ROUTES*/
 .project-routes-enter-active {
   animation: project-routes 1s ease-in;
@@ -111,6 +100,20 @@ html {
 
 .project-routes-leave-from {
   opacity :0;
+}
+
+/** ANIMATION */
+
+@keyframes global-routes {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes project-routes {

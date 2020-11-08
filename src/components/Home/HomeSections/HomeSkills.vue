@@ -125,7 +125,4 @@ img {
     width: auto;
 }
 
-
-
-
 </style>

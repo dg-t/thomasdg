@@ -35,10 +35,4 @@ section {
   overflow-x: hidden;
 }
 
-/* @media only screen and (max-width: 767px) {
-  .custom_heading {
-    font-size: 90%;
-  }
-} */
-
 </style>

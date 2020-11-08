@@ -37,8 +37,6 @@ export default {
 
 <style scoped>
 
-/** TODO REMOVE IMAGE FOR MOBILE */
-
 /** ROWS HEIGHT */
 
 .container_feature {
@@ -110,16 +108,17 @@ img {
     opacity: 0.8;
     z-index: -0.5;
     transition: opacity 1s;
-
 }
 
 /** MEDIA QUERY */
 
 @media only screen and (max-width: 767px) {
+
   .container_feature {
     height: 180px;
     padding: 30px 20px;
   }
+  
   .img_container {
     display: none;
   }
