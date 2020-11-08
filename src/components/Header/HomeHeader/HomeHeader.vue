@@ -25,7 +25,7 @@ header {
     height: 100vh;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1024px) {
   header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(../../../assets/header/home.jpg);
     background-attachment: scroll;

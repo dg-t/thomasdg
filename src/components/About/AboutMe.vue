@@ -3,8 +3,8 @@
 
     <achievements-header></achievements-header>
 
-    <section class="container-fluid row py-3 py-md-5 px-0 mx-0">
-      <div class="row container-fluid pb-2 pb-sm-4 pb-md-5 px-lg-5 mx-0">
+    <section class="container-fluid row about__section">
+      <div class="row container-fluid odd__about">
         <div class="container-fluid col-12">
           <h4>A little bit about me...</h4>
           <p>Hi! I am Thomas, a web developer in Barcelona, Spain. 
@@ -21,8 +21,8 @@
         </div>
       </div>
 
-      <div class="row section-color container-fluid px-lg-5 py-3 py-sm-4 py-md-5 mx-0">
-        <div class="col-lg-6 pr-lg-5">
+      <div class="row container-fluid even__about">
+        <div class="container-fluid col-lg-6 pr-lg-5">
           <h4>My passions</h4>
           <p>
             There are three things I love the most, programming, travel, and food. 
@@ -46,7 +46,7 @@
         </div>
       </div>
 
-      <div class="row container-fluid py-2 py-md-5 px-lg-5 mx-0">
+      <div class="row container-fluid odd__about">
         <div class="container-fluid col-12">
           <h4>Where I am now...</h4>
           <p>
@@ -69,11 +69,11 @@
         </div>
       </div>
 
-      <div class="row section-color container-fluid mx-0 py-3 py-sm-4 py-md-5">
+      <div class="row container-fluid even__about">
         <div class="col-lg-5 image_container container">
           <img src="../../assets/about/dream-min.jpg" class="img-fluid img_project" alt="dream">
         </div>
-        <div class="container-fluid  col-lg-6">
+        <div class="container-fluid col-lg-6">
           <h4>My Dreams</h4>
           <p>
             I travelled, I had fun, and I met a lot of people from everywhere around the world. <br />
@@ -87,7 +87,7 @@
         </div>
       </div>
 
-      <div class="row container-fluid py-md-5 px-lg-5 mx-0">
+      <div class="row container-fluid odd__about">
         <div class="container-fluid col-md-12">
           <h4>My Qualifications</h4>
           <p>
@@ -115,6 +115,24 @@ export default {
 </script>
 
 <style scoped>
+
+/** GENERAL */
+
+.about__section {
+  margin: 0;
+  padding: 20px 0;
+}
+
+.odd__about {
+  padding: 3%;
+  margin: 0;
+}
+
+.even__about {
+  padding: 3%;
+  margin: 0;
+  background-color: #f4f4f4;
+}
 
 /** GENERAL TEXT */
 p {
@@ -151,12 +169,16 @@ h4 {
 /** MEDIA QUERY */
 
 @media only screen and (max-width: 991px) {
+  /** IMAGE PADDING */
   .img_project {
-  padding: 7% 0;
+    padding: 7% 0;
   }
 }
 
 @media only screen and (max-width: 480px) {
+
+  /** IMAGE */
+
   .img_project {
   filter: brightness(100%);
   transform: rotate(0);
