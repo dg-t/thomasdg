@@ -47,18 +47,28 @@ export default {
 /** MEDIA QUERY */
 
 @media only screen and (max-width: 1024px)  {
-  .header-about {
+  .header-achievements {
+    background-attachment: scroll;
+    height: 50vh;
     background-position: 26% 0%;
+  }
+
+  .header-about {
+    background-attachment: scroll;
+    height: 50vh;
+    background-position: 26% 5%;
   }
 }
 
-@media only screen and (max-width: 767px)  {
+@media only screen and (max-width: 880px) {
   .header-achievements {
-    max-height: 500px;
-}
+    height: 40vh;
+    background-position: 26% 0%;
+  }
 
   .header-about {
-    max-height: 500px;
+    height: 40vh;
+    background-position: 26% 0%;
   }
 }
 

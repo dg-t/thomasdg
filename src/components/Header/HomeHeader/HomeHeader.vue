@@ -25,9 +25,10 @@ header {
     height: 100vh;
 }
 
-@media only screen and (max-width: 767px)  {
+@media only screen and (max-width: 992px) {
   header {
-    max-height: 700px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(../../../assets/header/home.jpg);
+    background-attachment: scroll;
   }
 }
 
