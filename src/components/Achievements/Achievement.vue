@@ -25,8 +25,8 @@
         <div class="col-lg-7 flip-box" v-if="id=='restaurant-reviews'">
           <div class="flip-box-inner">
             <p class="ghost_text" v-if="show">{{title}}</p>
-              <img :src="image" class="flip-box-front img-fluid image_box" :alt="title">
-              <img :src="image_two" class="flip-box-back img-fluid image_box" :alt="title">
+            <img :src="image" class="flip-box-front img-fluid image_box" :alt="title" @mouseover="show = !show" @mouseleave="show = !show">
+            <img :src="image_two" class="flip-box-back img-fluid image_box" :alt="title">
           </div>
         </div>
 
