@@ -25,4 +25,10 @@ header {
     height: 100vh;
 }
 
+@media only screen and (max-width: 767px)  {
+  header {
+    max-height: 700px;
+  }
+}
+
 </style>

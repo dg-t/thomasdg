@@ -52,4 +52,14 @@ export default {
   }
 }
 
+@media only screen and (max-width: 767px)  {
+  .header-achievements {
+    max-height: 500px;
+}
+
+  .header-about {
+    max-height: 500px;
+  }
+}
+
 </style>
