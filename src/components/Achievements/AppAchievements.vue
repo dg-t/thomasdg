@@ -156,6 +156,18 @@ export default {
 }
 
 /** LINKS */
+a.link_customized {
+  padding: 5px 10px;
+  color: #07c;
+  cursor: pointer;
+  transition: 0.6s;
+  text-decoration: none;
+}
+
+a.link_customized:hover {
+  color: #0af;
+  transition: all 0.5s ease;
+}
 
 .link_customized {
   display: inline-block;
@@ -171,6 +183,7 @@ export default {
   transform-origin:bottom right;
   transform-origin:100% 50%;
 }
+
 .link_customized:hover:after { 
   transform: scaleX(1);
   transform-origin:bottom left;

@@ -97,16 +97,4 @@ export default {
 
 <style scoped>
 
-a {
-  padding: 5px 10px;
-  color: #07c;
-  transition: 0.6s;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #0af;
-  transition: all 0.5s ease;
-}
-
 </style>

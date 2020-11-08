@@ -1,10 +1,9 @@
 <template>
   <div>
+
     <achievements-header></achievements-header>
 
-
     <section class="container-fluid row py-3 py-md-5 px-0 mx-0">
-
       <div class="row container-fluid pb-2 pb-sm-4 pb-md-5 px-lg-5 mx-0">
         <div class="container-fluid col-12">
           <h4>A little bit about me...</h4>
@@ -23,7 +22,6 @@
       </div>
 
       <div class="row section-color container-fluid px-lg-5 py-3 py-sm-4 py-md-5 mx-0">
-
         <div class="col-lg-6 pr-lg-5">
           <h4>My passions</h4>
           <p>
@@ -43,11 +41,9 @@
             <br />
           </p>
         </div>
-
         <div class="container image_container col-lg-6">
           <img src="../../assets/about/travel.jpg" class="img-fluid img_project" alt="travel">
         </div>
-
       </div>
 
       <div class="row container-fluid py-2 py-md-5 px-lg-5 mx-0">
@@ -74,11 +70,9 @@
       </div>
 
       <div class="row section-color container-fluid mx-0 py-3 py-sm-4 py-md-5">
-
         <div class="col-lg-5 image_container container">
           <img src="../../assets/about/dream-min.jpg" class="img-fluid img_project" alt="dream">
         </div>
-
         <div class="container-fluid  col-lg-6">
           <h4>My Dreams</h4>
           <p>
@@ -91,9 +85,7 @@
             I like the idea, and the possibility to be part of a Team that try to change the world for the best.
           </p>
         </div>
-
       </div>
-
 
       <div class="row container-fluid py-md-5 px-lg-5 mx-0">
         <div class="container-fluid col-md-12">
@@ -107,8 +99,8 @@
           </p>
         </div>
       </div>
-
     </section>
+    
   </div>
 </template>
 
