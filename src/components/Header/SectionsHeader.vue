@@ -36,7 +36,7 @@ export default {
 }
 
 .header-about {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../../assets/header/about-min.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url(../../assets/header/about-min.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
