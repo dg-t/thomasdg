@@ -27,7 +27,7 @@ export default {
 /** HEADER */
 
 .header-achievements {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(../../assets/header/achievement-min.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../../assets/header/achievement-min.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -36,7 +36,7 @@ export default {
 }
 
 .header-about {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(../../assets/header/about-min.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../../assets/header/about-min.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

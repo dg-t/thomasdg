@@ -17,7 +17,7 @@ export default {
 <style scoped>
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(../../../assets/header/home.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../../../assets/header/home.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -27,7 +27,6 @@ header {
 
 @media only screen and (max-width: 1024px) {
   header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(../../../assets/header/home.jpg);
     background-attachment: scroll;
   }
 }
