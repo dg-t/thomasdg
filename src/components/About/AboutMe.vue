@@ -6,7 +6,7 @@
     <section class="container-fluid row about__section">
       <div class="row container-fluid odd__about">
         <div class="container-fluid col-12">
-          <h4>A little bit about me...</h4>
+          <h4>A little bit about myself...</h4>
           <p>Hi! I am Thomas, a web developer in Barcelona, Spain. 
             <br />
             I born on January 1st, 1990 in Milano, Italy. In 2011 I moved to Barcelona, Spain, 
