@@ -11,7 +11,7 @@
         The web design is simple, elegant and fully responsive to allow the site to adapt to any screen size.<br />
         Many VUE feature has been implemented, such as <b>routing, forms, transitions</b> and more...<br />
         Feel free to navigate through it and check out the different feature.<br /><br /> 
-        In the <b>contact</b> me page you can get in touch with me for any question or further information.
+        In the <b>contact me</b> page you can get in touch with me for any question or further information.
     </p>
     </div>
 

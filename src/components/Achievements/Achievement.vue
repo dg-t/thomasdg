@@ -90,6 +90,8 @@ h3 {
   display:flex;
   justify-content: center;
   align-items: center;
+  word-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
 /** SCROLL IMAGE */
