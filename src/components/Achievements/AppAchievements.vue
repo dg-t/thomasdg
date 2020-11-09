@@ -33,6 +33,17 @@ export default {
     return {
       projects: [
         {
+          id: "digital-portfolio",
+          title: "Digital portfolio",
+          description: `<p>This project is the actual website you are navigating on in this very moment.<br />
+                            It is a single page application (SPA) made with <b>Vue.js 3 framework.</b><br />
+                            In this site, I introduce myself and display my work, accomplishments and skills.
+                          </p>`,
+          image: require("../../assets/projects/digital_portfolio-min.png"),
+          github_link: "https://github.com/dg-t/thomasdg",
+          webpage_link: "https://thomas-dg.web.app/"
+        },
+        {
           id: "restaurant-reviews",
           title: "Restaurant reviews",
           description: `<p>For this project I implemented an external API to the website. 

@@ -15,6 +15,8 @@ import About from './components/About/AboutMe.vue'
 // import TodoTesting from './components/Achievements/Projects/Todo_testing.vue'
 // import ExpressFood from './components/Achievements/Projects/Express_food.vue'
 
+const DigitalPortfolio = defineAsyncComponent(() =>
+    import ('./components/Achievements/Projects/Digital_portfolio.vue'))
 const RestaurantReview = defineAsyncComponent(() =>
     import ('./components/Achievements/Projects/Restaurant_review.vue'))
 const CatFacts = defineAsyncComponent(() =>
@@ -39,6 +41,7 @@ const router = createRouter({
         { path: '/', component: Home },
         { path: '/about', component: About, meta: { aboutHeader: true } },
         { path: '/achievements', component: Achievements, meta: { achievementsHeader: true } },
+        { path: '/achievements/digital-portfolio', component: DigitalPortfolio, meta: { hideHeader: true } },
         { path: '/achievements/restaurant-reviews', component: RestaurantReview, meta: { hideHeader: true } },
         { path: '/achievements/cat-facts', component: CatFacts, meta: { hideHeader: true } },
         { path: '/achievements/ninja-fight', component: NinjaFight, meta: { hideHeader: true } },
