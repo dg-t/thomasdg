@@ -99,6 +99,12 @@
           </p>
         </div>
       </div>
+
+      <div class="row container-fluid even__about">
+        <div class="container-fluid col-12 project_btn_container">
+            <a href="/pdf_file/cv_thomas.pdf" class="project_btn" target="_blank">DOWNLOAD CV</a>
+        </div>
+      </div>
     </section>
     
   </div>
@@ -120,7 +126,7 @@ export default {
 
 .about__section {
   margin: 0;
-  padding: 20px 0;
+  padding-top: 20px;
 }
 
 .odd__about {
