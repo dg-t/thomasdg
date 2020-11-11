@@ -31,7 +31,7 @@
             <li>Timeline</li>
             <li>Technical specification</li>
           </ul>
-          <p>Please click the button to see a copy of the project brief:
+          <p>Please click the link to see a copy of the project brief:
             <a href="/pdf_file/ProjectBriefFilmFestival.pdf" class="link_customized" target="_blank">see pdf</a>
           </p>
         </div>

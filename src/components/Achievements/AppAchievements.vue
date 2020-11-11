@@ -189,14 +189,14 @@ a.link_customized:hover {
   display:block;
   content: '';
   border-bottom: solid 1px #0af;  
-  transform: scaleX(0);  
+  transform: scaleX(1);  
   transition: transform 0.5s ease-in-out;
   transform-origin:bottom right;
   transform-origin:100% 50%;
 }
 
 .link_customized:hover:after { 
-  transform: scaleX(1);
+  transform: scaleX(0);
   transform-origin:bottom left;
 }
 
